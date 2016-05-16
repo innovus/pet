@@ -12,6 +12,8 @@ var db = pgp(connectionString);
 ///////////prueba/////////
 
 ///////////////
+
+/*
 module.exports = {
   user: {
     updateOrCreate: function(user, cb) {
@@ -38,10 +40,11 @@ module.exports = {
     clients: [],
     clientCount: 0,
     updateOrCreate: function(data, cb) {
+
       let id = this.clientCount++;
       this.clients[id] = {
         id: id,
-        userId: data.user.id
+        userId: data.user.id_user
       };
       cb(null, {
         id: id
@@ -76,17 +79,20 @@ module.exports = {
     }
   }
 };
-
+*/
 
 ////////////////////////
-/*
+
 const db1 = {
-	updateOrCreate: function  (user, cb){
+	updateOrCreateUser: function  (user, cb){
 		cb(null,user);
 	},
 	authenticate: function(email,password,cb){
 
 		var passwordEncriptada = encriptar(email,password);
+		/*console.log(passwordEncriptada);
+		console.log(email);*/
+
 		//consulto primero el usuario
 		db.one("select * from users where email = ${email}",
 		{
@@ -94,7 +100,7 @@ const db1 = {
 		})
 		.then(function(data){
 		//si entro aqui es por que  el usuario existe, y  va a revisar la contraseña
-			db.one("select email, token_refresh, id_user from users where email = ${email} and password = ${password}",
+			db.one("select email, id_user from users where email = ${email} and password = ${password}",
 			{
 				email:email,
 				password:passwordEncriptada
@@ -108,22 +114,65 @@ const db1 = {
 				if(err.code == 0){
 					//si la contraseña no coincide entra aqui 
 					return cb(null,false,{message: 'contraseña incorrecta'});
-				}else return next(err);
+				}else console.log(err);
 			
 			});
 		}).catch(function(err){
 			if (err.code == 0){
 				return cb(null,false,{message: 'Email incorrecto'});
 		
-			}else return next(err);
+			}else return cb(null,false,{message: err})
 				 
 		
 		});
-	}
+	},
+	updateOrCreateClient: function(data, cb) {
+
+		db.one('insert into cliente_id(id_user) values(${id_user}) returning id',
+        {id_user:data.user.id_user})
+        .then(function(data){
+        	return cb(null,data);
+        }).catch(function(err){
+        	return cb(null,false);
+        });     
+    },
+    storeToken: function(data, cb) {
+
+    	db.none('update cliente_id set token_refresh=${token_refresh} where id=${id}',{token_refresh:data.refreshToken,id:data.id})
+    	.catch(function(err){
+    		console.log("error");
+    	})
+      return cb();
+    },
+    findUserOfToken: function(data, cb) {
+      if(!data.refreshToken){
+        return cb(new Error('invalid token'));
+      }
+      //consulto primero el usuario
+      db.one("select id, id_user from cliente_id where token_refresh = ${token_refresh}",
+		{
+			token_refresh:data.refreshToken
+		})
+		.then(function(data){
+			return cb(null,data)
+
+		}).catch(function(err){
+			return cb(new Error('not found'));
+
+		})
+
+    },
+    rejectToken: function(data, cb){
+      for (let i = 0; i < this.clients.length; i++) {
+        if (this.clients[i].refreshToken === data.refreshToken) {
+          this.clients[i] = {};
+          return cb();
+        }
+      }
+      cb(new Error('not found'));
+    }
 };
 
-
-*/
 
 function encriptar(user, pass) {
    var crypto = require('crypto');
@@ -144,7 +193,7 @@ function login(req, res,next){
 		})
 	.then(function(data){
 		//si entro aqui es por que  el usuario existe, y  va a revisar la contraseña
-		db.one("select email,token_refresh,id_user from users where email = ${email} and password = ${password}",
+		db.one("select email,id_user from users where email = ${email} and password = ${password}",
 		{
 			email:emaili,
 			password:passwordEncriptada
@@ -211,9 +260,9 @@ function signin(req, res,next){
 
 
 
-/*
+
 module.exports = {
 	login: login,
 	signin: signin,
 	db1: db1
-}*/
+}

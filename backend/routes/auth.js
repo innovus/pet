@@ -53,21 +53,22 @@ const respond = {
 // passport //
 //////////////
 
-/*
+
 passport.use(new Strategy({
    usernameField: 'email',
    passwordField: 'password'
 },
 function(email, password, done) {
-   db.user.authenticate(email,password,done);
+   db.db1.authenticate(email,password,done);
 }));
-*/
+/*
 
 passport.use(new Strategy(
   function(username, password, done) {
-    db.user.authenticate(username, password, done);
+    db.db1.authenticate(username, password, done);
   }
 ));
+*/
 /*
 router.get('/registrar', function(req, res) {
   res.sendfile('./views/login.html');
@@ -114,26 +115,28 @@ router.get('/me', authenticate, function(req, res) {
 
 function serializeUser(req, res, next) { 
 console.log("serialize"); 
-  db.user.updateOrCreate(req.user, function(err, user){
+  db.db1.updateOrCreateUser(req.user, function(err, user){
     if(err) {return next(err);}
     // we store the updated information in req.user again
     req.user = {
-      id: user.id
+      id_user: user.id_user
     };
+    console.log(req.user);
     next();
   });
 }
 
 function serializeClient(req, res, next) {
   if (req.query.permanent === 'true') {
-    db.client.updateOrCreate({
+    db.db1.updateOrCreateClient({
       user: req.user
     }, function(err, client) {
       if (err) {
         return next(err);
       }
       // we store information needed in token in req.user
-      req.user.clientId = client.id;
+      req.user.cliente_id = client.id;
+      console.log(req.user);
       next();
     });
   } else {
@@ -160,7 +163,7 @@ function respond(req, res) {
 }*/
 
 function validateRefreshToken(req, res, next) {
-  db.client.findUserOfToken(req.body, function(err, user) {
+  db.db1.findUserOfToken(req.body, function(err, user) {
     if (err) {
       return next(err);
     }
@@ -170,7 +173,7 @@ function validateRefreshToken(req, res, next) {
 }
 
 function rejectToken(req, res, next) {
-  db.client.rejectToken(req.body, next);
+  db.db1.rejectToken(req.body, next);
 }
 
 
@@ -184,8 +187,8 @@ function rejectToken(req, res, next) {
 function generateAccessToken(req, res, next) {
   req.token = req.token ||  {};
   req.token.accessToken = jwt.sign({
-    id: req.user.id,
-    clientId: req.user.clientId
+    id: req.user.id_user,
+    clientId: req.user.cliente_id
   }, SECRET, {
     expiresIn: TOKENTIME
   });
@@ -194,10 +197,10 @@ function generateAccessToken(req, res, next) {
 
 function generateRefreshToken(req, res, next) {
   if (req.query.permanent === 'true') {
-    req.token.refreshToken = req.user.clientId.toString() + '.' + crypto.randomBytes(
+    req.token.refreshToken = req.user.cliente_id + '.' + crypto.randomBytes(
       40).toString('hex');
-    db.client.storeToken({
-      id: req.user.clientId,
+    db.db1.storeToken({
+      id: req.user.cliente_id,
       refreshToken: req.token.refreshToken
     }, next);
   } else {
