@@ -83,12 +83,9 @@ router.post('/login1',passport.initialize(), passport.authenticate(
     session: false,
     scope: []
   }), serializeUser, generateAccessToken, respond.auth);
-
-router.get('/me', authenticate, function(req, res) {
-  res.status(200).json(req.user);
-});
 */
-router.post('/login2', passport.initialize(), passport.authenticate(
+
+router.post('/login', passport.initialize(), passport.authenticate(
     'local', {
       session: false,
       scope: []
@@ -104,6 +101,20 @@ router.post('/token/reject', rejectToken, respond.reject);
 
 router.get('/me', authenticate, function(req, res) {
   res.status(200).json(req.user);
+});
+
+router.get('/tipo/:id', authenticate, function(req, res) {
+
+  dbb.one("select * from tipo where id = ${id}",
+    {
+      id:req.params.id
+    }).then(function(data){
+      res.status(200).json(data);
+
+    }).catch(function(err){
+      res.status(401).json(err);
+    });
+ // res.status(200).json(req.user);
 });
 
 
@@ -177,10 +188,6 @@ function rejectToken(req, res, next) {
 }
 
 
-
-
-
-
 //////////////////////
 // token generation //
 //////////////////////
@@ -209,10 +216,6 @@ function generateRefreshToken(req, res, next) {
 }
 
 //////////////////////
-
-
-
-
 
 
 module.exports = router;
