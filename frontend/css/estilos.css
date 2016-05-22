@@ -57,7 +57,7 @@ time, mark, audio, video {
 }
 body{
 
-	background: url('./huellas1.png') repeat left;
+	background: url('./huellasfondo.png') repeat left;
 
   
 }
@@ -80,13 +80,13 @@ body{
 }
 header {
   width: 100%;
-  background: #ececec url('./huellas1.png') repeat center;
+  background: #ececec url('./huellasfondo.png') repeat center;
 }
 header nav{
   width: 100%;
   
   margin: 10px auto;
-  background: url('./huellas1.png') no-repeat center;
+  background: url('./huellasfondo.png') no-repeat center;
 }
 header nav ul{
   overflow: hidden;
@@ -138,7 +138,7 @@ header nav ul li span{
 
 .contenedor{
   width: 100%;
-  background-color: #ED515B;
+  background-color: #536E7A;/*#ED515B rosado*/
   float: left;
 }
 .contenedor h2{
@@ -217,8 +217,8 @@ header nav ul li span{
 @media only screen and (max-width : 320px) {
   header{
     position: fixed;
-    background: #ececec url('./huellas1.png') repeat center;
-    color: #2E4A6D;
+    background: #49B1AA url('./huellasfondo.png') repeat center;
+    color: #fff;
 
   }
 
@@ -229,7 +229,7 @@ header nav ul li span{
     position: fixed;
     left: -100%;
     font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #ececec url('./huellasfondo.png') repeat center;
 
     
   }
@@ -238,22 +238,26 @@ header nav ul li span{
     display: block;
     float: none;
     border-bottom: 1px solid rgba(255,255,255, .3);
+    background: #49B1AA;
+  }
+  header nav ul li a{
+    color: #fff;
   }
   .menu_barsito{
     display: block;
     width: 100%;
-    background: #b91110;
+    background: #49B1AA;
     height: 60px;
-    color: #2E4A6D;
+    color: #fff;/*#2E4A6D*/
 
   }
   .menu_barsito .bt-menu{
     display: block;
     padding: 20px;
     height: 60px;
-    background: url('./huellas1.png') repeat center;
+    background:#49B1AA url('./huellasfondo.png') repeat center;
     font-family: 'Oswald', sans-serif;
-    color: #2E4A6D;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
