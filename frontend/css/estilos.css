@@ -185,10 +185,11 @@ header nav ul li span{
   float: left;
 }
 
-.btn-conoceme h2{
+.btn-conoceme h2 a{
   color: #fff;
   font-family: 'Oswald', sans-serif;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn-buscarmas{
