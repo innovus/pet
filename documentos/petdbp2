@@ -1,0 +1,791 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.5.1
+-- Dumped by pg_dump version 9.5.1
+
+-- Started on 2016-06-01 22:31:52 COT
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 1 (class 3079 OID 12623)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2481 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 198 (class 1259 OID 18781)
+-- Name: adopcion; Type: TABLE; Schema: public; Owner: personal
+--
+
+CREATE TABLE adopcion (
+    id_adopcion integer NOT NULL,
+    id_mascota integer,
+    estado character(1),
+    observacion character varying
+);
+
+
+ALTER TABLE adopcion OWNER TO personal;
+
+--
+-- TOC entry 197 (class 1259 OID 18779)
+-- Name: adopcion_id_adopcion_seq; Type: SEQUENCE; Schema: public; Owner: personal
+--
+
+CREATE SEQUENCE adopcion_id_adopcion_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE adopcion_id_adopcion_seq OWNER TO personal;
+
+--
+-- TOC entry 2482 (class 0 OID 0)
+-- Dependencies: 197
+-- Name: adopcion_id_adopcion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: personal
+--
+
+ALTER SEQUENCE adopcion_id_adopcion_seq OWNED BY adopcion.id_adopcion;
+
+
+--
+-- TOC entry 185 (class 1259 OID 18683)
+-- Name: cliente_id; Type: TABLE; Schema: public; Owner: personal
+--
+
+CREATE TABLE cliente_id (
+    id integer NOT NULL,
+    id_user integer,
+    token_refresh character varying
+);
+
+
+ALTER TABLE cliente_id OWNER TO personal;
+
+--
+-- TOC entry 186 (class 1259 OID 18686)
+-- Name: cliente_id_id_seq; Type: SEQUENCE; Schema: public; Owner: personal
+--
+
+CREATE SEQUENCE cliente_id_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE cliente_id_id_seq OWNER TO personal;
+
+--
+-- TOC entry 2483 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: cliente_id_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: personal
+--
+
+ALTER SEQUENCE cliente_id_id_seq OWNED BY cliente_id.id;
+
+
+--
+-- TOC entry 194 (class 1259 OID 18758)
+-- Name: datos_mascota; Type: TABLE; Schema: public; Owner: personal
+--
+
+CREATE TABLE datos_mascota (
+    id_dato_mascota integer NOT NULL,
+    latitud numeric,
+    longitud numeric,
+    ciudad character varying,
+    direccion character varying,
+    telefono character varying,
+    celular character varying,
+    email character varying
+);
+
+
+ALTER TABLE datos_mascota OWNER TO personal;
+
+--
+-- TOC entry 193 (class 1259 OID 18756)
+-- Name: datos_mascota_id_dato_mascota_seq; Type: SEQUENCE; Schema: public; Owner: personal
+--
+
+CREATE SEQUENCE datos_mascota_id_dato_mascota_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE datos_mascota_id_dato_mascota_seq OWNER TO personal;
+
+--
+-- TOC entry 2484 (class 0 OID 0)
+-- Dependencies: 193
+-- Name: datos_mascota_id_dato_mascota_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: personal
+--
+
+ALTER SEQUENCE datos_mascota_id_dato_mascota_seq OWNED BY datos_mascota.id_dato_mascota;
+
+
+--
+-- TOC entry 192 (class 1259 OID 18747)
+-- Name: imagenes_mascotas; Type: TABLE; Schema: public; Owner: personal
+--
+
+CREATE TABLE imagenes_mascotas (
+    id_imagen_mascota integer NOT NULL,
+    imagen_url character varying,
+    id_mascota integer
+);
+
+
+ALTER TABLE imagenes_mascotas OWNER TO personal;
+
+--
+-- TOC entry 191 (class 1259 OID 18745)
+-- Name: imagenes_mascotas_id_imagen_mascota_seq; Type: SEQUENCE; Schema: public; Owner: personal
+--
+
+CREATE SEQUENCE imagenes_mascotas_id_imagen_mascota_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE imagenes_mascotas_id_imagen_mascota_seq OWNER TO personal;
+
+--
+-- TOC entry 2485 (class 0 OID 0)
+-- Dependencies: 191
+-- Name: imagenes_mascotas_id_imagen_mascota_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: personal
+--
+
+ALTER SEQUENCE imagenes_mascotas_id_imagen_mascota_seq OWNED BY imagenes_mascotas.id_imagen_mascota;
+
+
+--
+-- TOC entry 188 (class 1259 OID 18722)
+-- Name: mascotas; Type: TABLE; Schema: public; Owner: personal
+--
+
+CREATE TABLE mascotas (
+    id_mascota integer NOT NULL,
+    id_tipos_mascota integer,
+    genero character(1),
+    edad integer,
+    raza character varying,
+    historia character varying,
+    id_user integer,
+    "tamaño" character varying,
+    nombre_mascota character varying
+);
+
+
+ALTER TABLE mascotas OWNER TO personal;
+
+--
+-- TOC entry 187 (class 1259 OID 18720)
+-- Name: mascotas_id_seq; Type: SEQUENCE; Schema: public; Owner: personal
+--
+
+CREATE SEQUENCE mascotas_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE mascotas_id_seq OWNER TO personal;
+
+--
+-- TOC entry 2486 (class 0 OID 0)
+-- Dependencies: 187
+-- Name: mascotas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: personal
+--
+
+ALTER SEQUENCE mascotas_id_seq OWNED BY mascotas.id_mascota;
+
+
+--
+-- TOC entry 196 (class 1259 OID 18770)
+-- Name: perdidos; Type: TABLE; Schema: public; Owner: personal
+--
+
+CREATE TABLE perdidos (
+    id_perdido integer NOT NULL,
+    fecha_hora date,
+    estado character(1),
+    descripcion character varying,
+    id_mascota integer
+);
+
+
+ALTER TABLE perdidos OWNER TO personal;
+
+--
+-- TOC entry 195 (class 1259 OID 18768)
+-- Name: perdidas_id_perdido_seq; Type: SEQUENCE; Schema: public; Owner: personal
+--
+
+CREATE SEQUENCE perdidas_id_perdido_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE perdidas_id_perdido_seq OWNER TO personal;
+
+--
+-- TOC entry 2487 (class 0 OID 0)
+-- Dependencies: 195
+-- Name: perdidas_id_perdido_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: personal
+--
+
+ALTER SEQUENCE perdidas_id_perdido_seq OWNED BY perdidos.id_perdido;
+
+
+--
+-- TOC entry 189 (class 1259 OID 18731)
+-- Name: situaciones; Type: TABLE; Schema: public; Owner: personal
+--
+
+CREATE TABLE situaciones (
+    id_situacion integer NOT NULL,
+    nombre_situacion character varying
+);
+
+
+ALTER TABLE situaciones OWNER TO personal;
+
+--
+-- TOC entry 190 (class 1259 OID 18734)
+-- Name: situaciones_id_situacion_seq; Type: SEQUENCE; Schema: public; Owner: personal
+--
+
+CREATE SEQUENCE situaciones_id_situacion_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE situaciones_id_situacion_seq OWNER TO personal;
+
+--
+-- TOC entry 2488 (class 0 OID 0)
+-- Dependencies: 190
+-- Name: situaciones_id_situacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: personal
+--
+
+ALTER SEQUENCE situaciones_id_situacion_seq OWNED BY situaciones.id_situacion;
+
+
+--
+-- TOC entry 181 (class 1259 OID 18405)
+-- Name: tipo; Type: TABLE; Schema: public; Owner: personal
+--
+
+CREATE TABLE tipo (
+    id integer NOT NULL,
+    nombre character varying
+);
+
+
+ALTER TABLE tipo OWNER TO personal;
+
+--
+-- TOC entry 182 (class 1259 OID 18411)
+-- Name: tipos_mascota; Type: TABLE; Schema: public; Owner: personal
+--
+
+CREATE TABLE tipos_mascota (
+    id_tipos_mascota integer NOT NULL,
+    nombre character varying
+);
+
+
+ALTER TABLE tipos_mascota OWNER TO personal;
+
+--
+-- TOC entry 183 (class 1259 OID 18664)
+-- Name: users; Type: TABLE; Schema: public; Owner: personal
+--
+
+CREATE TABLE users (
+    email character varying,
+    password character varying,
+    id_user integer NOT NULL,
+    name character varying
+);
+
+
+ALTER TABLE users OWNER TO personal;
+
+--
+-- TOC entry 184 (class 1259 OID 18672)
+-- Name: user_id_user_seq; Type: SEQUENCE; Schema: public; Owner: personal
+--
+
+CREATE SEQUENCE user_id_user_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE user_id_user_seq OWNER TO personal;
+
+--
+-- TOC entry 2489 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: user_id_user_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: personal
+--
+
+ALTER SEQUENCE user_id_user_seq OWNED BY users.id_user;
+
+
+--
+-- TOC entry 2314 (class 2604 OID 18784)
+-- Name: id_adopcion; Type: DEFAULT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY adopcion ALTER COLUMN id_adopcion SET DEFAULT nextval('adopcion_id_adopcion_seq'::regclass);
+
+
+--
+-- TOC entry 2308 (class 2604 OID 18688)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY cliente_id ALTER COLUMN id SET DEFAULT nextval('cliente_id_id_seq'::regclass);
+
+
+--
+-- TOC entry 2312 (class 2604 OID 18761)
+-- Name: id_dato_mascota; Type: DEFAULT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY datos_mascota ALTER COLUMN id_dato_mascota SET DEFAULT nextval('datos_mascota_id_dato_mascota_seq'::regclass);
+
+
+--
+-- TOC entry 2311 (class 2604 OID 18750)
+-- Name: id_imagen_mascota; Type: DEFAULT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY imagenes_mascotas ALTER COLUMN id_imagen_mascota SET DEFAULT nextval('imagenes_mascotas_id_imagen_mascota_seq'::regclass);
+
+
+--
+-- TOC entry 2309 (class 2604 OID 18725)
+-- Name: id_mascota; Type: DEFAULT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY mascotas ALTER COLUMN id_mascota SET DEFAULT nextval('mascotas_id_seq'::regclass);
+
+
+--
+-- TOC entry 2313 (class 2604 OID 18773)
+-- Name: id_perdido; Type: DEFAULT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY perdidos ALTER COLUMN id_perdido SET DEFAULT nextval('perdidas_id_perdido_seq'::regclass);
+
+
+--
+-- TOC entry 2310 (class 2604 OID 18736)
+-- Name: id_situacion; Type: DEFAULT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY situaciones ALTER COLUMN id_situacion SET DEFAULT nextval('situaciones_id_situacion_seq'::regclass);
+
+
+--
+-- TOC entry 2307 (class 2604 OID 18674)
+-- Name: id_user; Type: DEFAULT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY users ALTER COLUMN id_user SET DEFAULT nextval('user_id_user_seq'::regclass);
+
+
+--
+-- TOC entry 2473 (class 0 OID 18781)
+-- Dependencies: 198
+-- Data for Name: adopcion; Type: TABLE DATA; Schema: public; Owner: personal
+--
+
+INSERT INTO adopcion VALUES (1, 1, '1', 'no');
+INSERT INTO adopcion VALUES (2, 2, '1', 'no');
+
+
+--
+-- TOC entry 2490 (class 0 OID 0)
+-- Dependencies: 197
+-- Name: adopcion_id_adopcion_seq; Type: SEQUENCE SET; Schema: public; Owner: personal
+--
+
+SELECT pg_catalog.setval('adopcion_id_adopcion_seq', 2, true);
+
+
+--
+-- TOC entry 2460 (class 0 OID 18683)
+-- Dependencies: 185
+-- Data for Name: cliente_id; Type: TABLE DATA; Schema: public; Owner: personal
+--
+
+INSERT INTO cliente_id VALUES (5, NULL, '5.1468765e682ae1babd774c71ff3d0450e2f36ebb4134785120c0aefb65e7f786707d3a5679d67009');
+INSERT INTO cliente_id VALUES (6, 3, '6.eeea6011a88b61e152bee34fb99b597a02d1aacd3407d3a1a54d0d445c9f701c0a07644a138383cd');
+INSERT INTO cliente_id VALUES (7, 3, '7.aa8558c11b0da7aef6b86e083b96cfdd370f349ba46409fed525e309ae1a0b3528f14bd0b9ceb86e');
+INSERT INTO cliente_id VALUES (8, 3, '8.a8896b8424e40c52947bb13801863f97c38cd3676172c6f2d280614115ad81aadffea46036afa10e');
+INSERT INTO cliente_id VALUES (9, 3, '9.2e04b67cc32e5def87339d5361525ef0739db700ee0f27c49d2bec7679e4a0caeac3eec790e37485');
+INSERT INTO cliente_id VALUES (10, 3, '10.7cd2fe3e839ec9430019b4dc84ac30605fa8a7da52ee840ff31385c6f732901ce9393c275065ac11');
+INSERT INTO cliente_id VALUES (11, 3, '11.42290b547344a85e9daa7c16423a80111139428a7aa6445da1499ca0cb45afbd319198e0d1cc98bc');
+INSERT INTO cliente_id VALUES (12, 3, '12.f6f2bda3d8102abed790e29fedb2470f9f17e8cae5ae7d2d9a2be14e215e132e08fa1a665a871f93');
+INSERT INTO cliente_id VALUES (13, 3, '13.f4764d46ed0bf8f905091b37a7eef201921a44144ffe47e58c2ed52556428cefad66906fc9492770');
+INSERT INTO cliente_id VALUES (14, 3, '14.1679ee44fed14fa546fc2977609f59da0a5abd4d8918d848fa4d2b59ccdbba029a2e296c1e4c3096');
+INSERT INTO cliente_id VALUES (15, 3, NULL);
+
+
+--
+-- TOC entry 2491 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: cliente_id_id_seq; Type: SEQUENCE SET; Schema: public; Owner: personal
+--
+
+SELECT pg_catalog.setval('cliente_id_id_seq', 15, true);
+
+
+--
+-- TOC entry 2469 (class 0 OID 18758)
+-- Dependencies: 194
+-- Data for Name: datos_mascota; Type: TABLE DATA; Schema: public; Owner: personal
+--
+
+INSERT INTO datos_mascota VALUES (1, 15.3434, 23.43434545, 'pasto', 'calle 12a #41a - 74', '3113805576', NULL, 'jorge.innovus@gmail.com');
+
+
+--
+-- TOC entry 2492 (class 0 OID 0)
+-- Dependencies: 193
+-- Name: datos_mascota_id_dato_mascota_seq; Type: SEQUENCE SET; Schema: public; Owner: personal
+--
+
+SELECT pg_catalog.setval('datos_mascota_id_dato_mascota_seq', 1, true);
+
+
+--
+-- TOC entry 2467 (class 0 OID 18747)
+-- Dependencies: 192
+-- Data for Name: imagenes_mascotas; Type: TABLE DATA; Schema: public; Owner: personal
+--
+
+INSERT INTO imagenes_mascotas VALUES (1, 'eruerjker.jpg', 1);
+
+
+--
+-- TOC entry 2493 (class 0 OID 0)
+-- Dependencies: 191
+-- Name: imagenes_mascotas_id_imagen_mascota_seq; Type: SEQUENCE SET; Schema: public; Owner: personal
+--
+
+SELECT pg_catalog.setval('imagenes_mascotas_id_imagen_mascota_seq', 1, true);
+
+
+--
+-- TOC entry 2463 (class 0 OID 18722)
+-- Dependencies: 188
+-- Data for Name: mascotas; Type: TABLE DATA; Schema: public; Owner: personal
+--
+
+INSERT INTO mascotas VALUES (2, 1, 'm', 2, 'pikachu', 'no tiene', 3, 'Mediano', NULL);
+INSERT INTO mascotas VALUES (1, 1, 'f', 2, 'caniche', 'no tiene', 3, 'Mediano', NULL);
+
+
+--
+-- TOC entry 2494 (class 0 OID 0)
+-- Dependencies: 187
+-- Name: mascotas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: personal
+--
+
+SELECT pg_catalog.setval('mascotas_id_seq', 1, false);
+
+
+--
+-- TOC entry 2495 (class 0 OID 0)
+-- Dependencies: 195
+-- Name: perdidas_id_perdido_seq; Type: SEQUENCE SET; Schema: public; Owner: personal
+--
+
+SELECT pg_catalog.setval('perdidas_id_perdido_seq', 1, false);
+
+
+--
+-- TOC entry 2471 (class 0 OID 18770)
+-- Dependencies: 196
+-- Data for Name: perdidos; Type: TABLE DATA; Schema: public; Owner: personal
+--
+
+
+
+--
+-- TOC entry 2464 (class 0 OID 18731)
+-- Dependencies: 189
+-- Data for Name: situaciones; Type: TABLE DATA; Schema: public; Owner: personal
+--
+
+
+
+--
+-- TOC entry 2496 (class 0 OID 0)
+-- Dependencies: 190
+-- Name: situaciones_id_situacion_seq; Type: SEQUENCE SET; Schema: public; Owner: personal
+--
+
+SELECT pg_catalog.setval('situaciones_id_situacion_seq', 1, false);
+
+
+--
+-- TOC entry 2456 (class 0 OID 18405)
+-- Dependencies: 181
+-- Data for Name: tipo; Type: TABLE DATA; Schema: public; Owner: personal
+--
+
+INSERT INTO tipo VALUES (1, 'adotar');
+
+
+--
+-- TOC entry 2457 (class 0 OID 18411)
+-- Dependencies: 182
+-- Data for Name: tipos_mascota; Type: TABLE DATA; Schema: public; Owner: personal
+--
+
+INSERT INTO tipos_mascota VALUES (1, 'Perro');
+INSERT INTO tipos_mascota VALUES (2, 'Gato');
+
+
+--
+-- TOC entry 2497 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: user_id_user_seq; Type: SEQUENCE SET; Schema: public; Owner: personal
+--
+
+SELECT pg_catalog.setval('user_id_user_seq', 3, true);
+
+
+--
+-- TOC entry 2458 (class 0 OID 18664)
+-- Dependencies: 183
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: personal
+--
+
+INSERT INTO users VALUES ('jorge_luis91x@hotmail.com', '4594f47e4837b21b91dc1e45fdf6efc538935fc7', 3, NULL);
+
+
+--
+-- TOC entry 2322 (class 2606 OID 18696)
+-- Name: cliente_id_pk; Type: CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY cliente_id
+    ADD CONSTRAINT cliente_id_pk PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2335 (class 2606 OID 18789)
+-- Name: pk_adopcion; Type: CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY adopcion
+    ADD CONSTRAINT pk_adopcion PRIMARY KEY (id_adopcion);
+
+
+--
+-- TOC entry 2331 (class 2606 OID 18764)
+-- Name: pk_datos_mascota; Type: CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY datos_mascota
+    ADD CONSTRAINT pk_datos_mascota PRIMARY KEY (id_dato_mascota);
+
+
+--
+-- TOC entry 2329 (class 2606 OID 18755)
+-- Name: pk_imagenes_mascotas; Type: CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY imagenes_mascotas
+    ADD CONSTRAINT pk_imagenes_mascotas PRIMARY KEY (id_imagen_mascota);
+
+
+--
+-- TOC entry 2325 (class 2606 OID 18730)
+-- Name: pk_mascotas; Type: CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY mascotas
+    ADD CONSTRAINT pk_mascotas PRIMARY KEY (id_mascota);
+
+
+--
+-- TOC entry 2333 (class 2606 OID 18778)
+-- Name: pk_perdidos; Type: CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY perdidos
+    ADD CONSTRAINT pk_perdidos PRIMARY KEY (id_perdido);
+
+
+--
+-- TOC entry 2327 (class 2606 OID 18744)
+-- Name: pk_situaciones; Type: CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY situaciones
+    ADD CONSTRAINT pk_situaciones PRIMARY KEY (id_situacion);
+
+
+--
+-- TOC entry 2316 (class 2606 OID 18420)
+-- Name: primary_key_tipo; Type: CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY tipo
+    ADD CONSTRAINT primary_key_tipo PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2318 (class 2606 OID 18418)
+-- Name: primary_key_tipo_mascota; Type: CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY tipos_mascota
+    ADD CONSTRAINT primary_key_tipo_mascota PRIMARY KEY (id_tipos_mascota);
+
+
+--
+-- TOC entry 2320 (class 2606 OID 18682)
+-- Name: user_pkey; Type: CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT user_pkey PRIMARY KEY (id_user);
+
+
+--
+-- TOC entry 2323 (class 1259 OID 18702)
+-- Name: fki_id_user_users_fk; Type: INDEX; Schema: public; Owner: personal
+--
+
+CREATE INDEX fki_id_user_users_fk ON cliente_id USING btree (id_user);
+
+
+--
+-- TOC entry 2341 (class 2606 OID 18790)
+-- Name: fk_adopcion_mascota; Type: FK CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY adopcion
+    ADD CONSTRAINT fk_adopcion_mascota FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota);
+
+
+--
+-- TOC entry 2339 (class 2606 OID 18795)
+-- Name: fk_imagenes_mascotas; Type: FK CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY imagenes_mascotas
+    ADD CONSTRAINT fk_imagenes_mascotas FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota);
+
+
+--
+-- TOC entry 2337 (class 2606 OID 18800)
+-- Name: fk_mascotas_tipos_mascota; Type: FK CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY mascotas
+    ADD CONSTRAINT fk_mascotas_tipos_mascota FOREIGN KEY (id_tipos_mascota) REFERENCES tipos_mascota(id_tipos_mascota);
+
+
+--
+-- TOC entry 2338 (class 2606 OID 18805)
+-- Name: fk_mascotas_user; Type: FK CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY mascotas
+    ADD CONSTRAINT fk_mascotas_user FOREIGN KEY (id_user) REFERENCES users(id_user);
+
+
+--
+-- TOC entry 2340 (class 2606 OID 18810)
+-- Name: fk_perdidas_mascitas; Type: FK CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY perdidos
+    ADD CONSTRAINT fk_perdidas_mascitas FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota);
+
+
+--
+-- TOC entry 2336 (class 2606 OID 18697)
+-- Name: id_user_users_fk; Type: FK CONSTRAINT; Schema: public; Owner: personal
+--
+
+ALTER TABLE ONLY cliente_id
+    ADD CONSTRAINT id_user_users_fk FOREIGN KEY (id_user) REFERENCES users(id_user);
+
+
+--
+-- TOC entry 2480 (class 0 OID 0)
+-- Dependencies: 6
+-- Name: public; Type: ACL; Schema: -; Owner: personal
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM personal;
+GRANT ALL ON SCHEMA public TO personal;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2016-06-01 22:31:52 COT
+
+--
+-- PostgreSQL database dump complete
+--
+
