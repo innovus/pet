@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 //var users = require('../queries/users');
 
+var userController = require('../controllers/userController');
 
-var db = require('../queries/users');
 
 var promise = require('bluebird');
 var crypto = require('crypto')
@@ -21,6 +21,7 @@ var dbb = pgp(connectionString);
 ///////////////////
 const SECRET = 'server secret';
 const passport = require('passport');  
+
 const Strategy = require('passport-local');
 const expressJwt = require('express-jwt');
 const jwt = require('jsonwebtoken');
@@ -28,6 +29,9 @@ const authenticate = expressJwt({
   secret: SECRET
 });
 const TOKENTIME = 120 * 60; // in seconds
+
+
+
 
 
 // server responses //
@@ -53,22 +57,17 @@ const respond = {
 // passport //
 //////////////
 
-
 passport.use(new Strategy({
    usernameField: 'email',
    passwordField: 'password'
 },
 function(email, password, done) {
-   db.db1.authenticate(email,password,done);
+   userController.authenticate(email,password,done);
+  console.log("aqui")
 }));
-/*
 
-passport.use(new Strategy(
-  function(username, password, done) {
-    db.db1.authenticate(username, password, done);
-  }
-));
-*/
+
+
 /*
 router.get('/registrar', function(req, res) {
   res.sendfile('./views/login.html');
@@ -86,23 +85,28 @@ router.post('/login1',passport.initialize(), passport.authenticate(
 */
 
 router.post('/login', passport.initialize(), passport.authenticate(
-    'local', {
-      session: false,
-      scope: []
-    }), serializeUser, serializeClient, generateAccessToken,
-  generateRefreshToken, respond.auth);
+  'local', {
+    session: false,
+    scope: []
+  }), serializeUser, generateAccessToken, respond.auth);
 
 
 
-//////////new///
-////////////
-router.post('/token', validateRefreshToken, generateAccessToken,respond.token);
-router.post('/token/reject', rejectToken, respond.reject);
 
-router.get('/me', authenticate, function(req, res) {
-  res.status(200).json(req.user);
+router.post('/tipo/:id', validateRefreshToken,generateAccessToken, prueba, authenticate, function(req, res) {
+
+  dbb.one("select * from tipo where id = ${id}",
+    {
+      id:req.params.id
+    }).then(function(data){
+      res.status(200).json(data);
+
+    }).catch(function(err){
+      res.status(401).json(err);
+    });
+ // res.status(200).json(req.user);
 });
-
+/*
 router.get('/tipo/:id', authenticate, function(req, res) {
 
   dbb.one("select * from tipo where id = ${id}",
@@ -116,17 +120,28 @@ router.get('/tipo/:id', authenticate, function(req, res) {
     });
  // res.status(200).json(req.user);
 });
-
+*/
 
 /////////////
 ////helper///
 /////////////
 
+function prueba(req,res,next){
+  
+  /*req.setHeader('Authorization','Bearer '+req.token.accessToken);
+  req.writeHead(200, {
+  'Authorization': 'Bearer '+req.token.accessToken
+});
+  console.log(res)*/
+  console.log("pruebita")
+  next();
+
+}
 
 
 function serializeUser(req, res, next) { 
 console.log("serialize"); 
-  db.db1.updateOrCreateUser(req.user, function(err, user){
+  userController.updateOrCreateUser(req.user, function(err, user){
     if(err) {return next(err);}
     // we store the updated information in req.user again
     req.user = {
@@ -137,8 +152,9 @@ console.log("serialize");
   });
 }
 
+
 function serializeClient(req, res, next) {
-  if (req.query.permanent === 'true') {
+  
     db.db1.updateOrCreateClient({
       user: req.user
     }, function(err, client) {
@@ -150,9 +166,7 @@ function serializeClient(req, res, next) {
       console.log(req.user);
       next();
     });
-  } else {
-    next();
-  }
+
 }
 /*
 function generateToken(req, res, next) { 
@@ -179,6 +193,7 @@ function validateRefreshToken(req, res, next) {
       return next(err);
     }
     req.user = user;
+    console.log(req.user);
     next();
   });
 }
@@ -192,15 +207,18 @@ function rejectToken(req, res, next) {
 // token generation //
 //////////////////////
 function generateAccessToken(req, res, next) {
+  console.log("entro a generate acces token")
   req.token = req.token ||  {};
   req.token.accessToken = jwt.sign({
-    id: req.user.id_user,
-    clientId: req.user.cliente_id
+    id: req.user.id_user
   }, SECRET, {
     expiresIn: TOKENTIME
   });
+
+
   next();
 }
+
 
 function generateRefreshToken(req, res, next) {
   if (req.query.permanent === 'true') {

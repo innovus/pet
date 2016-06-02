@@ -154,7 +154,8 @@ const db1 = {
 			token_refresh:data.refreshToken
 		})
 		.then(function(data){
-			return cb(null,data)
+			console.log(data)
+			cb(null,data)
 
 		}).catch(function(err){
 			return cb(new Error('not found'));

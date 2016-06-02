@@ -26,6 +26,7 @@ var routes = require('./routes/index');
 //var users = require('./routes/users');
 
 var users = require('./routes/auth');
+var mascotas = require('./routes/mascotas');
 
 
 /*
@@ -144,6 +145,7 @@ app.use(function(err, req, res, next) {
 app.use(logger('dev'));
 //app.use(bodyParser.json());
 app.use('/auth',users );
+app.use('/mascotas',mascotas);
 
 app.get('/', function(req, res) {
   res.status(200).json({
