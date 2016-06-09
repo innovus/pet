@@ -4,6 +4,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Oregano|Finger+Paint|Rancho|Cabin+Condensed|Poppins|Pacifico|Josefin+Sans);
 @import url(https://fonts.googleapis.com/css?family=Oswald|Passion+One|Candal|Sigmar+One|Righteous|Comfortaa|Satisfy);
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,7 +27,7 @@ time, mark, audio, video {
 }
 body{
 
-	background: url('./huellas1.png') repeat left;
+	background: url('./huellasfondo.png') repeat left;
 
   
 }
@@ -49,13 +50,13 @@ body{
 }
 header {
   width: 100%;
-  background: #ececec url('./huellas1.png') repeat center;
+  background: #ececec url('./huellasfondo.png') repeat center;
 }
 header nav{
   width: 100%;
   
   margin: 10px auto;
-  background: url('./huellas1.png') no-repeat center;
+  background: url('./huellasfondo.png') no-repeat center;
 }
 header nav ul{
   overflow: hidden;
@@ -77,6 +78,21 @@ text-decoration: none;
 header nav ul li span{
   margin-right:10px;
 }
+@keyframes cambio{
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+/*FIN SLIDER*/
+
 
 .contenedor{
   width: 100%;
@@ -93,18 +109,71 @@ header nav ul li span{
   font-family: 'Oswald', sans-serif;
   text-align: center;
 }
-.tipo-mascota h3{
-  color: #F6B00C;
-  font-family: 'Oswald', sans-serif;
+
+/*formulario para adoptar mascotas*/
+.formulario-adoptar{
+  width: 98%;
+  margin-left: 1%;
+  float: left;
+  padding-bottom: 3px;
+  padding-top: 3px;
 
 }
-
-
-.ordenar{
-
-  font-family: 'Oswald', sans-serif;
+.input-form{
+  float: left;
+  font-family: 'Oswald', sans-serif; 
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: #F1636A;
+  border:none;
+}
+.formulario-adoptar select{
+  float: left;
+  font-family: 'Oswald', sans-serif; 
+  font-size: 17px;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: #F1636A;
+}
+.formulario-adoptar textarea{
+  float: left;
+  font-family: 'Oswald', sans-serif; 
+  font-size: 16px;
+  text-align: center;
+}
+.formulario-adoptar h2{
+  float: left;
+  color: #ececec;
+  }
+.radios{
+  width: 100%;
+  float: left;
+  text-align: center;
+  }
+.radios h3{
+  float: left;
+ }
+.radio {
+    display:inline-block;
+    float: left;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%
+    padding-top:5px auto;
+}
+.msj{
+  width: 100%;
   float: left;
 }
+.msj h2{
+  color: #fff;
+  width: 20%;
+  font-size:20px;
+}
+/*---------------------------------*/
 
 .perfiles{
   width: 100%;
@@ -146,20 +215,20 @@ header nav ul li span{
   text-decoration: none;
 }
 
-.btn-buscarmas{
+
+.btn-enviarsolicitud{
   float: left;
   cursor: pointer;
   box-sizing: border-box;
   background-color: #F1636A;
   border: dashed 1px #fff;
   text-align: center;
-}
-.btn-buscarmas h2{
   color: #fff;
   font-family: 'Oswald', sans-serif;
-  cursor: pointer;
-
+  font-size: 22px;
+  
 }
+
 
 /*footer*/
 .footer{
@@ -178,10 +247,9 @@ header nav ul li span{
 @media only screen and (max-width : 320px) {
   header{
     position: fixed;
-    background: #ececec url('./huellas1.png') repeat center;
     color: #2E4A6D;
 
-  }
+ }
 
   header nav{
     width: 100%;
@@ -189,10 +257,8 @@ header nav ul li span{
     margin: 0;
     position: fixed;
     left: -100%;
-    font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
-
-    
+    font-family: 'Oswald', sans-serif;  
+    background: #49B1AA  url('./huellasfondo.png') repeat left; 
   }
 
   header nav ul li {
@@ -212,7 +278,7 @@ header nav ul li span{
     display: block;
     padding: 20px;
     height: 60px;
-    background: url('./huellas1.png') repeat center;
+    background: url('./huellasfondo.png') repeat center;
     font-family: 'Oswald', sans-serif;
     color: #2E4A6D;
     text-decoration: none;
@@ -252,8 +318,6 @@ header nav ul li span{
 .requisitos h2{
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 90%;
-  margin-left:5%; 
   font-size: 17px;
   text-align: justify-all;
 }
@@ -266,46 +330,131 @@ header nav ul li span{
   text-align: justify-all;
 
 }
-.tipo-mascota{
-  width: 95%;
+/*----------------------*/
+.foto-perfil-mascota{
+	width: 98%;
+	height: 180px;
+	margin-left: 1%;
+	float: left;
+	background: #ececec;
+}
+  /* inicio slider*/
+.slider{
+  overflow: hidden;
   float: left;
-  background: #ececec;
-  margin-left: 2.5%;
-  padding-bottom: 3px;
-  padding-top: 3px;
+  width: 98%;
+  height: 176px;
+  margin-left: 1%;
+  padding-bottom: 1px;
+  margin-top: 1px;
   
+}
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite alternate;
 
 }
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+.slider img{
+  width: 100%;
+  height: 180px;
+}
+/*fin slider*/
 
+/*---------------------*/
+.info-perfil-mascota{
+	width: 98%;
+  margin-left: 1%;
+  margin-top: 4px;
+	float: left;
+  
+}
+.dato-info{
+	width: 100%;
+	float: left;
+	
+	text-align:justify;
+  background-color: #F1636A;
+ }
 
-.tipo-mascota input{
-   display:inline-block;
-    width:20%;
-    height:40px;
-    float: left;
-    vertical-align:middle;
-    cursor:pointer;
+.dato-info h3{
+	
+	float: left;
+  text-align: justify-all;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+
+}
+/*formulario para adoptar mascotas*/
+.formulario-adoptar{
+  width: 98%;
+  margin-left: 1%;
+  padding-bottom: 3px;
+  padding-top: 3px;
+
+}
+.input-form{
+  width: 96%;
+  margin-left: 1%;
+  height: 30px; 
+  font-size: 17px; 
+}
+.formulario-adoptar select{
+  width: 96%;
+  margin-left: 1%;
+  height: 30px;
+  font-size: 17px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  }
+.formulario-adoptar textarea{
+  width: 94.5%;
+  height: 70px;
+  margin-left: 1%;
+  font-size: 16px;
+ }
+.formulario-adoptar h2{
+  width: 98%;
+  font-size: 15px;
+}
+.radios{
+  width: 100%;
+  
+}
+.radios h3{
+  width: 10%;
+  font-size: 15px;
+}
+.radio {
+    width:10%;
+    margin-left: 15%;
+    height:30px;
     -moz-border-radius:  50%;
     border-radius:  50%
     padding-top:5px auto;
 }
-.tipo-mascota h3 {
-  color: #2E4A6D;
-  width: 20%;
+.msj h2{
+  color: #fff;
+  font-size:15px;
+}
+/*---------------------------------*/
+
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
   float: left;
-
+  padding: 4px;
 }
-/*-----fin requisitos*/
-
-.ordenar{
-  font-size: 17px;
-  width: 95%;
-  height: 40px;
-  margin-left: 2.5%;
-  margin-top: 5px;
-  margin-bottom: 5px;
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 15px;
+  font-family: 'Oswald', sans-serif;
 }
-
 
 /*----- un---- */
 .mascota{
@@ -356,13 +505,7 @@ header nav ul li span{
   
 }
 
-.btn-buscarmas{
-  width: 90%;  
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5%;
-  
-}
+
 .btn-buscarmas-mascotas{
   width: 90%;  
   margin-top: 10px;
@@ -380,13 +523,13 @@ header nav ul li span{
   text-align: center;
   
 }
-.btn-buscarmas-mascotas h2{
-  text-align: center;
-  font-size: 17px;
-}
-.btn-buscarmas h2{
-
-  font-size: 17px;
+.btn-enviarsolicitud{
+  width: 90%;  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  float: left;
+  
 }
 
 /*footer*/
@@ -395,12 +538,12 @@ header nav ul li span{
   
 }
 .social-media{
-  width: 50%;
-  margin-left: 25%;
+  width: 90%;
+  margin-left: 8%;
   height: 40px;
 }
 .social-media img{
-  width: 20%;
+  width: 22%;
   margin-top: 10px;
 }
 
@@ -411,7 +554,7 @@ header nav ul li span{
  header{
     position: fixed;
     margin-bottom: 15px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA url('./huellasfondo.png') repeat center;
     color: #2E4A6D;
   }
 
@@ -422,7 +565,7 @@ header nav ul li span{
     position: fixed;
     left: -100%;
     font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA url('./huellasfondo.png') repeat center;
 
     
   }
@@ -435,7 +578,7 @@ header nav ul li span{
   .menu_barsito{
     display: block;
     width: 100%;
-    background: #b91110;
+    background: #49B1AA url('./huellasfondo.png') repeat center;
     height: 60px;
     color: #2E4A6D;
 
@@ -444,7 +587,6 @@ header nav ul li span{
     display: block;
     padding: 20px;
     height: 60px;
-    background: #ececec url('./huellas1.png') repeat center;
     font-family: 'Oswald', sans-serif;
     color: #2E4A6D;
     text-decoration: none;
@@ -482,61 +624,152 @@ header nav ul li span{
 }
 
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%;
-  margin-left:5%; 
   font-size: 20px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 16px;
   text-align: center;
 
 }
-.tipo-mascota{
-  width: 90%;
-  float: left;
-  background: #ececec;
-  margin-left: 5%;
+.hola{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+/*formulario para adoptar mascotas*/
+.formulario-adoptar{
+  width: 85%;
+  margin-left: 7.5%;
   padding-bottom: 3px;
   padding-top: 3px;
-  
 
 }
-
-
-.tipo-mascota input{
-   display:inline-block;
-    width:20%;
-    height:40px;
-    float: left;
-    vertical-align:middle;
-    cursor:pointer;
+.input-form{
+  width: 96%;
+  margin-left: 1%;
+  height: 30px; 
+  font-size: 17px; 
+  
+}
+.formulario-adoptar select{
+  width: 96%;
+  margin-left: 1%;
+  height: 30px;
+  font-size: 17px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  }
+.formulario-adoptar textarea{
+  width: 94.5%;
+  height: 80px;
+  margin-left: 1%;
+  font-size: 16px;
+ }
+.formulario-adoptar h2{
+  width: 98%;
+  font-size: 15px;
+}
+.radios{
+  width: 100%;
+  }
+.radios h3{
+  width: 10%;
+  font-size: 15px;
+}
+.msj{
+  float: left;width: 100%;
+}
+.msj h2{
+  color: #fff;
+  font-size:15px;
+}
+.radio {
+    width:10%;
+    margin-left: 20%;
+    height:30px;
     -moz-border-radius:  50%;
     border-radius:  50%
     padding-top:5px auto;
 }
-.tipo-mascota h3 {
-  color: #2E4A6D;
-  width: 20%;
+/*---------------------------------*/
+.foto-perfil-mascota{
+  width: 99%;
+  height: 220px;
+  margin-left: 0.5%;
   float: left;
+  background: #ececec;
+}
+  /* inicio slider*/
+.slider{
+  overflow: hidden;
+  float: left;
+  width: 98%;
+  height: 215px;
+  margin-left: 1%;
+  padding-bottom: 1px;
+  margin-top: 1px;
+  
+}
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite alternate;
 
 }
-/*-----fin requisitos*/
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+.slider img{
+  width: 100%;
+  height: 215px;
+}
+/*fin slider*/
 
-.ordenar{
-  font-size: 17px;
-  width: 90%;
-  height: 40px;
-  margin-left: 5%;
+/*---------------------*/
+.info-perfil-mascota{
+  width: 98%;
+  margin-left: 1%;
+  float: left;
   margin-top: 3px;
-  margin-bottom: 3px;
+  background-color: #F1636A;
+}
+.dato-info{
+  width: 100%;
+  float: left;
+  
+  text-align:justify;
+ }
+.dato-info h3{
+  float: left;
+  text-align: center;
+  font-size: 17px;
+  }
 
+/*-*/
+/**/
+
+
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+.compartir-redes{
+  display: none;
 }
 
 .btn-buscarmas-mascotas{
@@ -610,18 +843,12 @@ header nav ul li span{
   
 }
 
-.btn-buscarmas{
+.btn-enviarsolicitud{
   width: 90%;  
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 5%;
   
-}
-
-
-.btn-buscarmas h2{
-
-  font-size: 17px;
 }
 
 /*footer*/
@@ -647,7 +874,7 @@ header nav ul li span{
    header{
     position: fixed;
     margin-bottom: 15px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA url('./huellasfondo.png') repeat center;
     color: #2E4A6D;
   }
 
@@ -658,7 +885,7 @@ header nav ul li span{
     position: fixed;
     left: -100%;
     font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA url('./huellasfondo.png') repeat center;
 
     
   }
@@ -680,7 +907,7 @@ header nav ul li span{
     display: block;
     padding: 20px;
     height: 60px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA url('./huellasfondo.png') repeat center;
     font-family: 'Oswald', sans-serif;
     color: #2E4A6D;
     text-decoration: none;
@@ -705,7 +932,6 @@ header nav ul li span{
 
  
 
-
 /* inicio ccontenedor*/
 
 .contenedor{
@@ -719,14 +945,18 @@ header nav ul li span{
   width: 100%;
   float: left;
 }
-
-.requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%;
-  margin-left:5%; 
-  font-size: 28px;
+.hola{
+   width: 90%;
+   margin-left: 5%;
+ font-size: 28px;
   text-align: justify-all;
+  float: left;
+}
+.requisitos h2{
+   width: 90%;
+ font-size: 28px;
+  text-align: justify-all;
+  float: left;
 }
 .requisitos h3{
   margin-top: 10px;
@@ -737,48 +967,141 @@ header nav ul li span{
   text-align: center;
 
 }
-.tipo-mascota{
-  width: 90%;
+/*----------------------*/
+.foto-perfil-mascota{
+  width: 80%;
+  height: 260px;
+  margin-left: 10%;
   float: left;
   background: #ececec;
-  margin-left: 5%;
-  padding-bottom: 3px;
-  padding-top: 3px;
+}
+  /* inicio slider*/
+.slider{
+  overflow: hidden;
+  float: left;
+  width: 98%;
+  height: 255px;
+  margin-left: 1%;
+  padding-bottom: 1px;
+  margin-top: 1px;
   
+}
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite alternate;
 
 }
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+.slider img{
+  width: 100%;
+  height: 255px;
+}
+/*fin slider*/
+.hola{
+  margin-top: 10px;
+}
+/*---------------------*/
+.info-perfil-mascota{
+  width: 98%;
+  margin-left: 1%;
+  float: left;
+  background-color: #F1636A;
+  margin-top: 5px;
+  text-align: center;
+  cursor: pointer;
+  
+}
+.dato-info{
+  width: 100%;
+  float: left;
+  text-align:justify;
+ }
 
+.dato-info h3{
+  float: left;
+  text-align: left;
+  font-size: 15px;
+  }
+/*formulario para adoptar mascotas*/
+.formulario-adoptar{
+  width: 70%;
+  margin-left: 15%;
+  padding-bottom: 3px;
+  padding-top: 3px;
 
-.tipo-mascota input{
-   display:inline-block;
-    width:15%;
-    height:40px;
-    float: left;
-    vertical-align:middle;
-    cursor:pointer;
+}
+.input-form{
+  width: 96%;
+  margin-left: 1%;
+  height: 30px; 
+  font-size: 17px; 
+  
+}
+.formulario-adoptar select{
+  width: 96%;
+  margin-left: 1%;
+  height: 30px;
+  font-size: 17px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  }
+.formulario-adoptar textarea{
+  width: 94.5%;
+  height: 70px;
+  margin-left: 1%;
+  font-size: 16px;
+ }
+.formulario-adoptar h2{
+  width: 100%;
+  font-size: 20px;
+}
+.radios{
+  width: 100%;
+ 
+}
+.radios h3{
+  width: 10%;
+  font-size: 15px;
+}
+.radio {
+  margin-left:17%;
+    width:10%;
+    height:30px;
     -moz-border-radius:  50%;
     border-radius:  50%
     padding-top:5px auto;
-    margin-left: 10%;
 }
-.tipo-mascota h3 {
-  color: #2E4A6D;
-  width: 15%;
+.msj{
+  width: 100%;
+}
+.msj h2{
+  color: #fff;
+  font-size:15px;
+}
+/*---------------------------------*/
+
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
   float: left;
-  margin-left: 4%;
-
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
 }
-/*-----fin requisitos*/
-
-.ordenar{
-  font-size: 17px;
-  width: 90%;
-  height: 40px;
-  margin-left: 5%;
-  margin-top: 3px;
-  margin-bottom: 3px;
-
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 18px;
+  font-family: 'Oswald', sans-serif;
 }
+
+/*----- un---- */
 
 .btn-buscarmas-mascotas{
   width: 90%;  
@@ -801,15 +1124,16 @@ header nav ul li span{
   text-align: center;
   font-size: 17px;
 }
-.btn-buscarmas{
-  width: 80%;  
+.btn-enviarsolicitud{
+  width: 45%;  
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 10%;
+  margin-left: 27.5%;
+  float: left;
   
 }
-.btn-buscarmas h2{
-
+.btn-buscarmas-mascotas h2{
+  text-align: center;
   font-size: 17px;
 }
 
@@ -817,19 +1141,19 @@ header nav ul li span{
 .mascota{
   
 
-  width: 45%;
-  margin-left: 3%;
+  width: 70%;
+  margin-left: 15%;
   background-color: #31486A;
-  height:180px;
+  height:270px;
   margin-top: 10px;
   margin-bottom: 10px;
   float: left;
   text-align: center;
 }
 .img-fondo{
-  width: 90%;
+  width: 95%;
   margin-left: 2.5%;
-  height: 160px;
+  height: 250px;
   margin-top: 10px;
   float: left;
   box-shadow: inset 0px 21px 63px -2px rgba(49,72,106,0.9);
@@ -838,8 +1162,9 @@ header nav ul li span{
 
 
 .datos-mascota{
+  padding-top: 40px;
    width: 50%;
-  height: 160px;
+  height: 210px;
   
 }
 .datos-mascota h2{
@@ -891,7 +1216,7 @@ header nav ul li span{
    header{
     position: fixed;
     margin-bottom: 15px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
     color: #2E4A6D;
   }
 
@@ -902,7 +1227,7 @@ header nav ul li span{
     position: fixed;
     left: -100%;
     font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA url('./huellasfondo.png') repeat center;
 
     
   }
@@ -924,7 +1249,7 @@ header nav ul li span{
     display: block;
     padding: 20px;
     height: 60px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
     font-family: 'Oswald', sans-serif;
     color: #2E4A6D;
     text-decoration: none;
@@ -963,65 +1288,159 @@ header nav ul li span{
 }
 
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%;
-  margin-left:5%; 
   font-size: 32px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 18px;
   text-align: center;
 
 }
-.tipo-mascota{
-  width: 70%;
+/*----------------------*/
+.foto-perfil-mascota{
+  width: 50%;
+   margin-left: 25%;
   float: left;
   background: #ececec;
-  margin-left: 15%;
+  padding-bottom: 2px;
+  margin-top: 2px;
+}
+  /* inicio slider*/
+.slider{
+  overflow: hidden;
+  float: left;
+  width: 98%;
+  height: 297px;
+  margin-left: 1%;
   padding-bottom: 3px;
-  padding-top: 3px;
+  margin-top: 3px;
   
+}
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite alternate;
 
 }
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+.slider img{
+  width: 100%;
+  height: 297px;
+}
+/*fin slider*/
+/*formulario para adoptar mascotas*/
+.hola{
+  width: 60%;
+  float: left;
+  margin-left: 20%;
+}
+.formulario-adoptar{
+  width: 60%;
+  margin-left: 20%;
+  padding-bottom: 3px;
+  padding-top: 3px;
 
-
-.tipo-mascota input{
-   display:inline-block;
-    width:15%;
-    height:40px;
-    float: left;
-    vertical-align:middle;
-    cursor:pointer;
+}
+.input-form{
+  width: 96%;
+  margin-left: 1%;
+  height: 30px; 
+  font-size: 17px; 
+  
+}
+.formulario-adoptar select{
+  width: 96%;
+  margin-left: 1%;
+  height: 30px;
+  font-size: 17px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  }
+.formulario-adoptar textarea{
+  width: 94.5%;
+  height: 70px;
+  margin-left: 1%;
+  font-size: 16px;
+ }
+.formulario-adoptar h2{
+  width: 100%;
+  font-size: 20px;
+}
+.radios{
+  width: 100%;
+ 
+}
+.radios h3{
+  width: 10%;
+  font-size: 15px;
+}
+.radio {
+  margin-left:17%;
+    width:10%;
+    height:30px;
     -moz-border-radius:  50%;
     border-radius:  50%
     padding-top:5px auto;
-    margin-left: 10%;
 }
-.tipo-mascota h3 {
-  color: #2E4A6D;
-  width: 15%;
+.msj{
+  width: 100%;
+}
+.msj h2{
+  color: #fff;
+  font-size:15px;
+}
+/*---------------------------------*/
+/*---------------------*/
+.info-perfil-mascota{
+  width: 90%;
+  margin-top: 5px;
+  margin-left: 5%;
   float: left;
-  margin-left: 4%;
+  text-align: center;
+  background-color: #F1636A;
+  
+}
+.dato-info{
+  width: 100%;
+  float: left;
+  text-align:justify;
+ }
+ .dato-info h3{
+  float: left;
+  text-align: center;
+  font-size: 18px;
+  }
 
+.btn-enviarsolicitud{
+  width: 50%;  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+
+  
+}
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 18px;
+  font-family: 'Oswald', sans-serif;
 }
 /*-----fin requisitos*/
-
-.ordenar{
-  font-size: 17px;
-  width: 70%;
-  height: 40px;
-  margin-left: 15%;
-  margin-top: 3px;
-  margin-bottom: 3px;
-
-}
-
 .btn-buscarmas-mascotas{
   width: 90%;  
   margin-top: 10px;
@@ -1043,27 +1462,15 @@ header nav ul li span{
   text-align: center;
   font-size: 17px;
 }
-.btn-buscarmas{
-  width: 90%;  
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5%;
-  
-}
-.btn-buscarmas h2{
-
-  font-size: 17px;
-}
-
 
 /*----- un---- */
 .mascota{
   
 
-  width: 30%;
+  width: 47%;
   margin-left: 2.5%;
   background-color: #31486A;
-  height:180px;
+  height:270px;
   margin-top: 10px;
   margin-bottom: 10px;
   float: left;
@@ -1072,7 +1479,7 @@ header nav ul li span{
 .img-fondo{
   width: 90%;
   margin-left: 2.5%;
-  height: 160px;
+  height: 260px;
   margin-top: 10px;
   float: left;
   box-shadow: inset 0px 21px 63px -2px rgba(49,72,106,0.9);
@@ -1082,7 +1489,8 @@ header nav ul li span{
 
 .datos-mascota{
    width: 50%;
-  height: 160px;
+  height: 180px;
+ padding-top: 80px;
   
 }
 .datos-mascota h2{
@@ -1185,6 +1593,7 @@ header nav ul li a:hover{
 
 .contenedor{
   padding-bottom: 10px;
+  float: left;
 }
 
 /*requisitos*/
@@ -1192,67 +1601,164 @@ header nav ul li a:hover{
   background: #2E4A6D;
   width: 100%;
   float: left;
+   text-align: center;
 }
 
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%;
-  margin-left:5%; 
-  font-size: 32px;
+   font-size: 32px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%;
-  margin-left:5%; 
+  
   font-size: 18px;
   text-align: center;
 
 }
-.tipo-mascota{
-  width: 40%;
+/*----------------------*/
+.foto-perfil-mascota{
+  width: 60%;
+  margin-left: 20%;
   float: left;
   background: #ececec;
-  margin-left: 30%;
-  padding-bottom: 3px;
-  padding-top: 3px;
+  padding-left: 2px;
+}
+  /* inicio slider*/
+.slider{
+  overflow: hidden;
+  float: left;
+  width: 99.7%;
+  height: 380px;
+  padding-bottom: 2px;
+  margin-top: 2px;
   
+}
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite alternate;
 
 }
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+.slider img{
+  width: 100%;
+  height: 380px;
+}
+/*fin slider*/
+/*formulario para adoptar mascotas*/
+.hola{
+  width: 60%;
+  float: left;
+  margin-left: 20%;
+}
+.formulario-adoptar{
+  width: 35%;
+  margin-left: 32.5%;
+  padding-bottom: 3px;
+  padding-top: 3px;
 
-
-.tipo-mascota input{
-   display:inline-block;
-    width:15%;
-    height:40px;
-    float: left;
-    vertical-align:middle;
-    cursor:pointer;
+}
+.input-form{
+  width: 96%;
+  margin-left: 1%;
+  height: 30px; 
+  font-size: 17px; 
+  
+}
+.formulario-adoptar select{
+  width: 96%;
+  margin-left: 1%;
+  height: 30px;
+  font-size: 17px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  }
+.formulario-adoptar textarea{
+  width: 94.5%;
+  height: 70px;
+  margin-left: 1%;
+  font-size: 16px;
+ }
+.formulario-adoptar h2{
+  width: 100%;
+  font-size: 20px;
+}
+.radios{
+  width: 100%;
+ 
+}
+.radios h3{
+  width: 10%;
+  font-size: 15px;
+}
+.radio {
+  margin-left:17%;
+    width:10%;
+    height:30px;
     -moz-border-radius:  50%;
     border-radius:  50%
     padding-top:5px auto;
-    margin-left: 10%;
 }
-.tipo-mascota h3 {
-  color: #2E4A6D;
-  width: 15%;
+.msj{
+  width: 100%;
   float: left;
-  margin-left: 4%;
+   text-align: center;
+}
+.msj h2{
+  color: #fff;
+  font-size:20px;
 
+}
+/*---------------------------------*/
+/*---------------------*/
+.info-perfil-mascota{
+  width: 70%;
+  margin-left: 15%;
+  float: left;
+  margin-top: 0px;
+  background-color: #cecece;
+  border: dashed 1px #fff;
+  margin-top: 5px;
+
+   
+}
+.dato-info{
+  width: 100%;
+  float: left;
+  text-align:justify;
+  background-color: #F1636A;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-bottom: 8px;
+ }
+.dato-info h2{
+  float: left;
+  text-align: center;
+  font-size: 18px;
+
+  }
+
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 18px;
+  font-family: 'Oswald', sans-serif;
 }
 /*-----fin requisitos*/
 
-.ordenar{
-  font-size: 17px;
-  width: 40%;
-  height: 40px;
-  margin-left: 30%;
-  margin-top: 3px;
-  margin-bottom: 3px;
-
-}
 
 .btn-buscarmas-mascotas{
   width: 30%;  
@@ -1275,16 +1781,13 @@ header nav ul li a:hover{
   text-align: center;
   font-size: 17px;
 }
-.btn-buscarmas{
-  width: 50%;  
+.btn-enviarsolicitud{
+  width: 40%;  
+
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 25%;
+  margin-left: 30%;
   
-}
-.btn-buscarmas h2{
-
-  font-size: 17px;
 }
 
 /*----- un---- */
@@ -1294,16 +1797,16 @@ header nav ul li a:hover{
   width: 30%;
   margin-left: 2.5%;
   background-color: #31486A;
-  height:180px;
+  height:280px;
   margin-top: 10px;
   margin-bottom: 10px;
   float: left;
   text-align: center;
 }
 .img-fondo{
-  width: 90%;
+  width: 95%;
   margin-left: 2.5%;
-  height: 160px;
+  height: 255px;
   margin-top: 10px;
   float: left;
   box-shadow: inset 0px 21px 63px -2px rgba(49,72,106,0.9);
@@ -1313,7 +1816,8 @@ header nav ul li a:hover{
 
 .datos-mascota{
    width: 50%;
-  height: 160px;
+  height: 200px;
+  padding-top: 60px;
   
 }
 .datos-mascota h2{

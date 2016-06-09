@@ -4,37 +4,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Oregano|Finger+Paint|Rancho|Cabin+Condensed|Poppins|Pacifico|Josefin+Sans);
 @import url(https://fonts.googleapis.com/css?family=Oswald|Passion+One|Candal|Sigmar+One|Righteous|Comfortaa|Satisfy);
-/* 
 
-font-family: 'Oregano', cursive;
-
-font-family: 'Finger Paint', cursive;
-
-font-family: 'Rancho', cursive;
-
-font-family: 'Cabin Condensed', sans-serif;
-
-font-family: 'Poppins', sans-serif;
-
-font-family: 'Pacifico', cursive;
-
-font-family: 'Josefin Sans', sans-serif;
-
-font-family: 'Oswald', sans-serif;
-
-font-family: 'Passion One', cursive;
-
-font-family: 'Candal', sans-serif;
-
-font-family: 'Sigmar One', cursive;
-
-font-family: 'Righteous', cursive;
-
-font-family: 'Comfortaa', cursive;
-font-family: 'Satisfy', cursive;
-
-
-background:#b91110; */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -108,14 +78,6 @@ text-decoration: none;
 header nav ul li span{
   margin-right:10px;
 }
-/* si tuviera iconos al lado de los li
-header nav ul li span{
-  margin-right:10px;
-}
-
-*/
-
-
 
 /*-----------header-----------------------*/
 

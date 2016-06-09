@@ -4,37 +4,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Oregano|Finger+Paint|Rancho|Cabin+Condensed|Poppins|Pacifico|Josefin+Sans);
 @import url(https://fonts.googleapis.com/css?family=Oswald|Passion+One|Candal|Sigmar+One|Righteous|Comfortaa|Satisfy);
-/* 
 
-font-family: 'Oregano', cursive;
-
-font-family: 'Finger Paint', cursive;
-
-font-family: 'Rancho', cursive;
-
-font-family: 'Cabin Condensed', sans-serif;
-
-font-family: 'Poppins', sans-serif;
-
-font-family: 'Pacifico', cursive;
-
-font-family: 'Josefin Sans', sans-serif;
-
-font-family: 'Oswald', sans-serif;
-
-font-family: 'Passion One', cursive;
-
-font-family: 'Candal', sans-serif;
-
-font-family: 'Sigmar One', cursive;
-
-font-family: 'Righteous', cursive;
-
-font-family: 'Comfortaa', cursive;
-font-family: 'Satisfy', cursive;
-
-
-background:#b91110; */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -199,6 +169,7 @@ header nav ul li span{
   text-decoration: none;
 }
 
+
 .btn-buscarmas{
   float: left;
   cursor: pointer;
@@ -213,6 +184,17 @@ header nav ul li span{
   cursor: pointer;
 
 }
+.btn-buscarmas a{
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+/**/
+
+/**/
 
 /*footer*/
 .footer{
@@ -231,7 +213,7 @@ header nav ul li span{
 @media only screen and (max-width : 320px) {
   header{
     position: fixed;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #ececec url('./huellasfondo.png') repeat center;
     color: #2E4A6D;
 
   }
@@ -243,7 +225,7 @@ header nav ul li span{
     position: fixed;
     left: -100%;
     font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA url('./huellasfondo.png') repeat center;
 
     
   }
@@ -265,7 +247,7 @@ header nav ul li span{
     display: block;
     padding: 20px;
     height: 60px;
-    background: url('./huellas1.png') repeat center;
+    background: url('./huellasfondo.png') repeat center;
     font-family: 'Oswald', sans-serif;
     color: #2E4A6D;
     text-decoration: none;
@@ -303,21 +285,22 @@ header nav ul li span{
 }
 
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
-  font-size: 17px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
+   
   width: 90%;
   margin-left:5%; 
-  font-size: 14px;
+  font-size: 15px;
   text-align: justify-all;
 
+}
+.hola{
+  margin-top: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
 }
 /*----------------------*/
 .foto-perfil-mascota{
@@ -372,7 +355,7 @@ header nav ul li span{
   background-color: #F1636A;
  }
 .dato-info h2{
-	width: 50%;
+	width: 43%;
 	float: left;
   text-align: right;
   font-size: 15px;
@@ -535,7 +518,7 @@ color: #fff;
  header{
     position: fixed;
     margin-bottom: 15px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
     color: #2E4A6D;
   }
 
@@ -546,7 +529,7 @@ color: #fff;
     position: fixed;
     left: -100%;
     font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
 
     
   }
@@ -568,7 +551,7 @@ color: #fff;
     display: block;
     padding: 20px;
     height: 60px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #ececec url('./huellasfondo.png') repeat center;
     font-family: 'Oswald', sans-serif;
     color: #2E4A6D;
     text-decoration: none;
@@ -606,16 +589,12 @@ color: #fff;
 }
 
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 20px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 16px;
@@ -668,13 +647,13 @@ color: #fff;
   background-color: #F1636A;
 }
 .dato-info{
-  width: 50%;
+  width: 100%;
   float: left;
   
   text-align:justify;
  }
 .dato-info h2{
-  width: 50%;
+  width: 45%;
   float: left;
   text-align: right;
   font-size: 15px;
@@ -687,6 +666,11 @@ color: #fff;
   text-align: left;
   font-size: 15px;
   }
+
+.hola{
+  margin-top: 5px;
+  font-size: 25px;
+}
 .titulo-ver-otras-pets{
   background-color: #F6B00C;
   text-align: center;
@@ -732,10 +716,6 @@ color: #fff;
   cursor: pointer;
 }
 
-/*----- un---- */
-
-
-/*--------------------------*/
 
 /*-----fin requisitos*/
 
@@ -857,7 +837,7 @@ color: #fff;
    header{
     position: fixed;
     margin-bottom: 15px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
     color: #2E4A6D;
   }
 
@@ -868,7 +848,7 @@ color: #fff;
     position: fixed;
     left: -100%;
     font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
 
     
   }
@@ -890,7 +870,7 @@ color: #fff;
     display: block;
     padding: 20px;
     height: 60px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
     font-family: 'Oswald', sans-serif;
     color: #2E4A6D;
     text-decoration: none;
@@ -931,16 +911,12 @@ color: #fff;
 }
 
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 28px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 18px;
@@ -984,11 +960,16 @@ color: #fff;
 /*fin slider*/
 
 /*---------------------*/
+.hola{
+  margin-top: 5px;
+  font-size: 25px;
+}
 .info-perfil-mascota{
-  width: 45%;
+ padding-top: 45px;
+ width: 45%;
   margin-left: 1%;
   float: left;
-  height: 260px;
+  height: 215px;
   background-color: #F1636A;
   
 }
@@ -998,7 +979,7 @@ color: #fff;
   text-align:justify;
  }
 .dato-info h2{
-  width: 50%;
+  width: 45%;
   float: left;
   text-align: right;
   font-size: 15px;
@@ -1179,7 +1160,7 @@ color: #fff;
    header{
     position: fixed;
     margin-bottom: 15px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
     color: #2E4A6D;
   }
 
@@ -1190,7 +1171,7 @@ color: #fff;
     position: fixed;
     left: -100%;
     font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
 
     
   }
@@ -1212,7 +1193,7 @@ color: #fff;
     display: block;
     padding: 20px;
     height: 60px;
-    background: #ececec url('./huellas1.png') repeat center;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
     font-family: 'Oswald', sans-serif;
     color: #2E4A6D;
     text-decoration: none;
@@ -1251,16 +1232,12 @@ color: #fff;
 }
 
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 32px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 18px;
@@ -1268,6 +1245,10 @@ color: #fff;
 
 }
 /*----------------------*/
+.hola{
+  margin-top: 5px;
+  font-size: 25px;
+}
 .foto-perfil-mascota{
   width: 50%;
    margin-left: 2%;
@@ -1309,6 +1290,8 @@ color: #fff;
   width: 45%;
   margin-left: 1%;
   float: left;
+  height: 240px;
+  padding-top: 40px;
   background-color: #F1636A;
   
 }
@@ -1336,8 +1319,8 @@ color: #fff;
   width: 100%;
   background: #cecece;
   float: left;
-  margin-top: 5px;
   padding-bottom: 5px;
+  margin-top: 30px;
 }
 .compartir-reds{
    display: none;
@@ -1510,14 +1493,14 @@ color: #fff;
 }
 header {
   width: 100%;
-  background: #ececec url('./huellas1.png') repeat center;
+  background: #49B1AA  url('./huellasfondo.png') repeat center;
   float: left;
 }
 header nav{
   width: 90%;
  
   margin-left: 10%;
-  background: url('./huellas1.png') no-repeat center;
+  background: #49B1AA  url('./huellasfondo.png') no-repeat center;
   float: left;
 }
 header nav ul{
@@ -1552,11 +1535,6 @@ header nav ul li a:hover{
 .contenido{
   background: #ED515B;
 }   
-  
-
-
-/*contenedor*/
-
 
 .contenedor{
   padding-bottom: 10px;
@@ -1571,17 +1549,13 @@ header nav ul li a:hover{
 }
 
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 32px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%;
+   width: 90%;
   margin-left:5%; 
   font-size: 18px;
   text-align: center;
@@ -1627,11 +1601,10 @@ header nav ul li a:hover{
   width: 25%;
   margin-left: 1.5%;
   float: left;
-  margin-top: 0px;
-  height: 380px;
-  background-color: #cecece;
+  height: 340px;
+  background-color: #F1636A;
   border: dashed 1px #fff;
-   
+   padding-top: 40px;
 }
 .dato-info{
   width: 100%;
@@ -1640,7 +1613,7 @@ header nav ul li a:hover{
   background-color: #F1636A;
  }
 .dato-info h2{
-  width: 50%;
+  width: 47%;
   float: left;
   text-align: right;
   font-size: 18px;
@@ -1656,20 +1629,14 @@ header nav ul li a:hover{
 
 .compartir-reds{
   display: none;
-  width: 35%;
-  margin-left: 32.5%;
-  background: #cecece;
-  float: left;
-  margin-top: 5px;
-  padding-bottom: 5px;
 }
 .compartir-redes{
   
   width: 100%;
   background: #cecece;
   float: left;
-  margin-top: 5px;
-  padding-bottom: 5px;
+  margin-top: 46px;
+  
 }
 .comparteme{
   width: 100%;
