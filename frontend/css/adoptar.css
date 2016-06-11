@@ -25,10 +25,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 body{
-
-	background: url('./huellas1.png') repeat left;
-
-  
+background: url('./huellasfondo.png') repeat left;  
 }
 
 .contenido{
@@ -36,6 +33,7 @@ body{
   height: 100%;
   position: absolute;
   transition: all 0.3s;
+  background-color: #536E7A;/*#ED515B rosado*/
 }
 .menu-bar{
   cursor: pointer;
@@ -45,29 +43,54 @@ body{
 }
 /*---------------------------------------*/
 .menu_barsito{
-  display: none;
-}
+    display: block;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+
+  }
+  .menu_barsito .bt-menu{
+    display: block;
+    padding: 20px;
+    height: 60px;
+    background: #49B1AA  url('./huellasfondo.png') repeat center;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .menu_barsito span{
+      float:right;
+      font-size:25px;
+      padding-bottom: 10px;
+    }
+
 header {
   width: 100%;
-  background: #ececec url('./huellas1.png') repeat center;
+  background: #49B1AA  url('./huellasfondo.png') repeat center;
 }
 header nav{
   width: 100%;
   
   margin: 10px auto;
-  background: url('./huellas1.png') no-repeat center;
+  background: #49B1AA  url('./huellasfondo.png') repeat center;
 }
 header nav ul{
   overflow: hidden;
   list-style: none;
   height: 100%;
+ background: #49B1AA  url('./huellasfondo.png') repeat center;
 }
 header nav ul li{
   float: left;
 }
 
 header nav ul li a{
-color: #2E4A6D;
+color: #fff;
 padding: 20px;
 display: block;
 font-size: 18px;
@@ -77,10 +100,26 @@ text-decoration: none;
 header nav ul li span{
   margin-right:10px;
 }
+ header nav ul li a:hover{
+    background:#2E4A6D;
+    color: #F6B00C;
+
+}
+/*--------------------*/
 
 .contenedor{
   width: 100%;
-  background-color: #ececec;
+  background-color: #536E7A;/*#ED515B rosado*/
+  float: left;
+}
+.contenedor h2{
+  color: #fff;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+.requisitos{
+  background-color: #536E7A;/*#ED515B rosado*/
+  width: 100%;
   float: left;
 }
 .requisitos h2{
@@ -115,23 +154,22 @@ header nav ul li span{
 }
 /*----- un---- */
 .mascota{
-  background-color: #31486A;  
+  float: left;
+ background-color:rgba(185,193,196,1); /*rgba(49,72,106,0.7);*/
 }
 
 .datos-mascota{
   float: right;
-  background-color: rgba(49,72,106,0.7);
+  background-color:rgba(185,193,196,0.6); /*rgba(49,72,106,0.7);*/
 }
 .datos-mascota h2{
-   color: #F6B00C;
-   font-family: 'Righteous', cursive;
-   float: left;
-}
+   color: #536E7A;
+   font-family: 'Oswald', sans-serif; 
+  }
 .datos-mascota h3{
- color: #FFF;
- font-family: 'Righteous', cursive;
- float: left;
-}
+ color:#536E7A;
+ font-family: 'Oswald', sans-serif; 
+ }
 
 .btn-conoceme{
   background-color: #F6B00C;
@@ -146,20 +184,19 @@ header nav ul li span{
   text-decoration: none;
 }
 
-.btn-buscarmas{
+.btn-buscarmas-mascotas{
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
   float: left;
   cursor: pointer;
   box-sizing: border-box;
   background-color: #F1636A;
   border: dashed 1px #fff;
   text-align: center;
+  padding-bottom: 5px;
+  
 }
-.btn-buscarmas h2{
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  cursor: pointer;
 
-}
 
 /*footer*/
 .footer{
@@ -173,48 +210,21 @@ header nav ul li span{
   display: table-row;
   
 }
-
-
-@media only screen and (max-width : 320px) {
-  header{
-    position: fixed;
-    background: #ececec url('./huellas1.png') repeat center;
-    color: #2E4A6D;
-
-  }
-
-  header nav{
-    width: 100%;
-    height:1000%;
-    margin: 0;
-    position: fixed;
-    left: -100%;
-    font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
-
-    
-  }
-
-  header nav ul li {
-    display: block;
-    float: none;
-    border-bottom: 1px solid rgba(255,255,255, .3);
-  }
-  .menu_barsito{
+.menu_barsito{
     display: block;
     width: 100%;
-    background: #b91110;
+    background: #49B1AA;
     height: 60px;
-    color: #2E4A6D;
+    color: red;/*#2E4A6D*/
 
   }
   .menu_barsito .bt-menu{
     display: block;
     padding: 20px;
     height: 60px;
-    background: url('./huellas1.png') repeat center;
+    background:#49B1AA url('./huellasfondo.png') repeat center;
     font-family: 'Oswald', sans-serif;
-    color: #2E4A6D;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
@@ -228,13 +238,35 @@ header nav ul li span{
       padding-bottom: 10px;
     }
 
+
+@media only screen and (max-width : 320px) {
+  header{
+    position: fixed;
+    color: #2E4A6D;
+
+ }
+
+  header nav{
+    width: 100%;
+    height:1000%;
+    margin: 0;
+    position: fixed;
+    left: -100%;
+    font-family: 'Oswald', sans-serif;  
+   }
+
+  header nav ul li {
+    display: block;
+    float: none;
+    border-bottom: 1px solid rgba(255,255,255, .3);
+  }
+  
   header nav ul li a:hover{
     background:#2E4A6D;
     border-left: 5px solid #F6B00C;
     color: #F6B00C;
 
   }
-
 /* inicio ccontenedor*/
 
 .contenedor{
@@ -243,11 +275,7 @@ header nav ul li span{
 
 }
 /*requisitos*/
-.requisitos{
-  background: #2E4A6D;
-  width: 100%;
-  float: left;
-}
+
 
 .requisitos h2{
   margin-top: 10px;
@@ -306,20 +334,16 @@ header nav ul li span{
   margin-bottom: 5px;
 }
 
-
 /*----- un---- */
 .mascota{
-  
-
   width: 95%;
   margin-left: 2.5%;
-  background-color: #2E4A6D;
   height:200px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 .img-fondo{
-
+  background-color: #CED8D9;/*#2E4A6D;*/
   width: 95%;
   margin-left: 2.5%;
   height: 180px;
@@ -329,7 +353,7 @@ header nav ul li span{
 
 }
 .datos-mascota{
-   width: 50%;
+  width: 50%;
   height: 180px;
   
 }
@@ -356,37 +380,18 @@ header nav ul li span{
   
 }
 
-.btn-buscarmas{
-  width: 90%;  
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5%;
-  
-}
 .btn-buscarmas-mascotas{
   width: 90%;  
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 5%;
-  padding-top: 7px;
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
+  padding-top: 5px;
   height: 40px;
-  float: left;
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: #F1636A;
-  border: dashed 1px #fff;
-  text-align: center;
-  
+   
 }
 .btn-buscarmas-mascotas h2{
-  text-align: center;
-  font-size: 17px;
-}
-.btn-buscarmas h2{
-
-  font-size: 17px;
+   font-size: 13px;
+   padding-bottom: 10px;
 }
 
 /*footer*/
@@ -411,8 +416,6 @@ header nav ul li span{
  header{
     position: fixed;
     margin-bottom: 15px;
-    background: #ececec url('./huellas1.png') repeat center;
-    color: #2E4A6D;
   }
 
   header nav{
@@ -421,10 +424,7 @@ header nav ul li span{
     margin: 0;
     position: fixed;
     left: -100%;
-    font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
-
-    
+       
   }
 
   header nav ul li {
@@ -432,39 +432,8 @@ header nav ul li span{
     float: none;
     border-bottom: 1px solid rgba(255,255,255, .3);
   }
-  .menu_barsito{
-    display: block;
-    width: 100%;
-    background: #b91110;
-    height: 60px;
-    color: #2E4A6D;
-
-  }
-  .menu_barsito .bt-menu{
-    display: block;
-    padding: 20px;
-    height: 60px;
-    background: #ececec url('./huellas1.png') repeat center;
-    font-family: 'Oswald', sans-serif;
-    color: #2E4A6D;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .menu_barsito span{
-      float:right;
-      font-size:25px;
-      padding-bottom: 10px;
-    }
-
-      header nav ul li a:hover{
-    background:#2E4A6D;
-    border-left: 5px solid #F6B00C;
-    color: #F6B00C;
-
+  header nav ul li a:hover{
+  border-left: 5px solid #F6B00C;
   }
 
  /* inicio ccontenedor*/
@@ -475,11 +444,6 @@ header nav ul li span{
 
 }
 /*requisitos*/
-.requisitos{
-  background: #2E4A6D;
-  width: 100%;
-  float: left;
-}
 
 .requisitos h2{
   margin-top: 10px;
@@ -539,62 +503,37 @@ header nav ul li span{
 
 }
 
-.btn-buscarmas-mascotas{
-  width: 90%;  
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5%;
-  padding-top: 7px;
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  height: 40px;
-  float: left;
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: #F1636A;
-  border: dashed 1px #fff;
-  text-align: center;
-  
-}
-.btn-buscarmas-mascotas h2{
-  text-align: center;
-  font-size: 17px;
-}
+
 /*----- un---- */
 .mascota{
-  
-
-  width: 80%;
-  margin-left: 10%;
-  background-color: #31486A;
-  height:180px;
+  width: 88%;
+  margin-left: 6%;
+  height:210px;
   margin-top: 10px;
-  margin-bottom: 10px;
-}
+  padding-top: 10px;
+  }
 .img-fondo{
-  width: 90%;
+  width: 95%;
   margin-left: 2.5%;
-  height: 160px;
-  margin-top: 10px;
-  float: left;
-  box-shadow: inset 0px 21px 63px -2px rgba(49,72,106,0.9);
-
-}
+  height: 90%;
+  }
 
 
 .datos-mascota{
-   width: 50%;
-  height: 160px;
+  width: 50%;
+  height: 90%;
+  padding-top: 40px;
+  text-align: center;
   
 }
 .datos-mascota h2{
   font-size: 25px;
-   margin-left: 3%;
-   width: 90%;
+  margin-left: 3%;
+  width: 90%;
 
 }
 .datos-mascota h3{
-  font-size: 18px;
+ font-size: 18px;
  margin-left: 7%;
 }
 
@@ -610,18 +549,19 @@ header nav ul li span{
   
 }
 
-.btn-buscarmas{
+.btn-buscarmas-mascotas{
   width: 90%;  
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 5%;
-  
+  padding-top: 7px;
+  height: 50px;
+   
 }
-
-
-.btn-buscarmas h2{
-
+.btn-buscarmas-mascotas h2{
+  text-align: center;
   font-size: 17px;
+  margin-bottom: 10px;
 }
 
 /*footer*/
@@ -647,9 +587,7 @@ header nav ul li span{
    header{
     position: fixed;
     margin-bottom: 15px;
-    background: #ececec url('./huellas1.png') repeat center;
-    color: #2E4A6D;
-  }
+   }
 
   header nav{
     width: 65%;
@@ -657,10 +595,7 @@ header nav ul li span{
     margin: 0;
     position: fixed;
     left: -100%;
-    font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
-
-    
+        
   }
 
   header nav ul li {
@@ -668,44 +603,10 @@ header nav ul li span{
     float: none;
     border-bottom: 1px solid rgba(255,255,255, .3);
   }
-  .menu_barsito{
-    display: block;
-    width: 100%;
-    background: #b91110;
-    height: 60px;
-    color: #2E4A6D;
-
-  }
-  .menu_barsito .bt-menu{
-    display: block;
-    padding: 20px;
-    height: 60px;
-    background: #ececec url('./huellas1.png') repeat center;
-    font-family: 'Oswald', sans-serif;
-    color: #2E4A6D;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .menu_barsito span{
-      float:right;
-      font-size:25px;
-      padding-bottom: 10px;
-    }
-
-      header nav ul li a:hover{
-    background:#2E4A6D;
+  header nav ul li a:hover{
     border-left: 5px solid #F6B00C;
-    color: #F6B00C;
-
   }
-
- 
-
-
+  
 /* inicio ccontenedor*/
 
 .contenedor{
@@ -714,11 +615,6 @@ header nav ul li span{
 
 }
 /*requisitos*/
-.requisitos{
-  background: #2E4A6D;
-  width: 100%;
-  float: left;
-}
 
 .requisitos h2{
   margin-top: 10px;
@@ -780,66 +676,49 @@ header nav ul li span{
 
 }
 
+/*----- un---- */
+
 .btn-buscarmas-mascotas{
   width: 90%;  
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 5%;
   padding-top: 7px;
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  height: 40px;
-  float: left;
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: #F1636A;
-  border: dashed 1px #fff;
-  text-align: center;
+  height: 60px;
+  
   
 }
 .btn-buscarmas-mascotas h2{
   text-align: center;
   font-size: 17px;
 }
-.btn-buscarmas{
-  width: 80%;  
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10%;
-  
-}
-.btn-buscarmas h2{
-
+.btn-buscarmas-mascotas h2{
+  text-align: center;
   font-size: 17px;
 }
 
-/*----- un---- */
-.mascota{
-  
 
-  width: 45%;
-  margin-left: 3%;
-  background-color: #31486A;
-  height:180px;
+.mascota{
+  width: 70%;
+  margin-left: 15%;
+  height:270px;
   margin-top: 10px;
   margin-bottom: 10px;
-  float: left;
-  text-align: center;
-}
+  }
+
 .img-fondo{
-  width: 90%;
+  width: 95%;
   margin-left: 2.5%;
-  height: 160px;
+  height: 250px;
   margin-top: 10px;
   float: left;
-  box-shadow: inset 0px 21px 63px -2px rgba(49,72,106,0.9);
-
 }
 
 
 .datos-mascota{
+  padding-top: 40px;
    width: 50%;
-  height: 160px;
+  height: 210px;
   
 }
 .datos-mascota h2{
@@ -864,9 +743,6 @@ header nav ul li span{
   font-size: 15px;
   
 }
-
-
-
 /*footer*/
 .footer{
   height: 80px;
@@ -888,23 +764,17 @@ header nav ul li span{
 }
 
  @media only screen and (max-width : 992px) and (min-width: 770px) {
-   header{
+    header{
     position: fixed;
     margin-bottom: 15px;
-    background: #ececec url('./huellas1.png') repeat center;
-    color: #2E4A6D;
-  }
+   }
 
   header nav{
     width: 45%;
     height:1000%;
     margin: 0;
     position: fixed;
-    left: -100%;
-    font-family: 'Oswald', sans-serif;
-    background: #ececec url('./huellas1.png') repeat center;
-
-    
+    left: -100%;   
   }
 
   header nav ul li {
@@ -912,42 +782,10 @@ header nav ul li span{
     float: none;
     border-bottom: 1px solid rgba(255,255,255, .3);
   }
-  .menu_barsito{
-    display: block;
-    width: 100%;
-    background: #b91110;
-    height: 60px;
-    color: #2E4A6D;
-
+  header nav ul li a:hover{
+  border-left: 5px solid #F6B00C;
   }
-  .menu_barsito .bt-menu{
-    display: block;
-    padding: 20px;
-    height: 60px;
-    background: #ececec url('./huellas1.png') repeat center;
-    font-family: 'Oswald', sans-serif;
-    color: #2E4A6D;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .menu_barsito span{
-      float:right;
-      font-size:25px;
-      padding-bottom: 10px;
-    }
-
-      header nav ul li a:hover{
-    background:#2E4A6D;
-    border-left: 5px solid #F6B00C;
-    color: #F6B00C;
-
-  }
-
-  
+    
 /* inicio ccontenedor*/
 
 .contenedor{
@@ -956,11 +794,6 @@ header nav ul li span{
 
 }
 /*requisitos*/
-.requisitos{
-  background: #2E4A6D;
-  width: 100%;
-  float: left;
-}
 
 .requisitos h2{
   margin-top: 10px;
@@ -1022,67 +855,26 @@ header nav ul li span{
 
 }
 
-.btn-buscarmas-mascotas{
-  width: 90%;  
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5%;
-  padding-top: 7px;
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  height: 40px;
-  float: left;
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: #F1636A;
-  border: dashed 1px #fff;
-  text-align: center;
-  
-}
-.btn-buscarmas-mascotas h2{
-  text-align: center;
-  font-size: 17px;
-}
-.btn-buscarmas{
-  width: 90%;  
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5%;
-  
-}
-.btn-buscarmas h2{
-
-  font-size: 17px;
-}
-
-
 /*----- un---- */
 .mascota{
-  
-
-  width: 30%;
+  width: 47%;
   margin-left: 2.5%;
-  background-color: #31486A;
-  height:180px;
+  height:270px;
   margin-top: 10px;
   margin-bottom: 10px;
-  float: left;
   text-align: center;
-}
+  }
 .img-fondo{
-  width: 90%;
+  width: 95%;
   margin-left: 2.5%;
-  height: 160px;
-  margin-top: 10px;
-  float: left;
-  box-shadow: inset 0px 21px 63px -2px rgba(49,72,106,0.9);
-
+  height: 90%;
+  margin-top: 2.5%;
+  
 }
-
-
 .datos-mascota{
    width: 50%;
-  height: 160px;
+  height: 70%;
+ padding-top: 80px;
   
 }
 .datos-mascota h2{
@@ -1107,8 +899,19 @@ header nav ul li span{
   font-size: 15px;
   
 }
-
-
+.btn-buscarmas-mascotas{
+  width: 90%;  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  padding-top: 7px;
+  height: 60px;
+ 
+}
+.btn-buscarmas-mascotas h2{
+  text-align: center;
+  font-size: 17px;
+}
 
 /*footer*/
 .footer{
@@ -1135,14 +938,11 @@ header nav ul li span{
 }
 header {
   width: 100%;
-  background: #ececec url('./huellas1.png') repeat center;
   float: left;
 }
 header nav{
   width: 90%;
- 
   margin-left: 10%;
-  background: url('./huellas1.png') no-repeat center;
   float: left;
 }
 header nav ul{
@@ -1154,22 +954,17 @@ header nav ul li{
 }
 
 header nav ul li a{
-color: #2E4A6D;
 padding: 20px;
 display: block;
 font-size: 18px;
 text-decoration: none;
- font-family: 'Oswald', sans-serif;
 }
 header nav ul li span{
   margin-right:10px;
 }
 
 header nav ul li a:hover{
-  background:#2E4A6D;
-  
-  color: #F6B00C;
-
+ border-bottom: 2px solid #F6B00C;
 }
 
 
@@ -1177,21 +972,12 @@ header nav ul li a:hover{
 .contenido{
   background: #ED515B;
 }   
-  
-
 
 /*contenedor*/
 
 
 .contenedor{
   padding-bottom: 10px;
-}
-
-/*requisitos*/
-.requisitos{
-  background: #2E4A6D;
-  width: 100%;
-  float: left;
 }
 
 .requisitos h2{
@@ -1254,66 +1040,25 @@ header nav ul li a:hover{
 
 }
 
-.btn-buscarmas-mascotas{
-  width: 30%;  
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 35%;
-  padding-top: 7px;
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  height: 40px;
-  float: left;
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: #F1636A;
-  border: dashed 1px #fff;
-  text-align: center;
-  
-}
-.btn-buscarmas-mascotas h2{
-  text-align: center;
-  font-size: 17px;
-}
-.btn-buscarmas{
-  width: 50%;  
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 25%;
-  
-}
-.btn-buscarmas h2{
-
-  font-size: 17px;
-}
-
 /*----- un---- */
 .mascota{
-  
-
   width: 30%;
   margin-left: 2.5%;
-  background-color: #31486A;
-  height:180px;
+  height:280px;
   margin-top: 10px;
   margin-bottom: 10px;
-  float: left;
   text-align: center;
-}
+  }
 .img-fondo{
-  width: 90%;
+  width: 95%;
   margin-left: 2.5%;
-  height: 160px;
+  height: 255px;
   margin-top: 10px;
-  float: left;
-  box-shadow: inset 0px 21px 63px -2px rgba(49,72,106,0.9);
-
 }
-
-
 .datos-mascota{
    width: 50%;
-  height: 160px;
+  height: 200px;
+  padding-top: 60px;
   
 }
 .datos-mascota h2{
@@ -1336,6 +1081,28 @@ header nav ul li a:hover{
 
 .btn-conoceme h2{
   font-size: 15px;
+  
+}
+.btn-buscarmas-mascotas{
+  width: 40%;  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30%;
+  padding-top: 7px;
+  height: 50px;
+  float: left;
+    
+}
+.btn-buscarmas-mascotas h2{
+  text-align: center;
+  font-size: 17px;
+}
+.btn-enviarsolicitud{
+  width: 40%;  
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30%;
   
 }
 
