@@ -26,7 +26,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 body{
-background: url('./huellasfondo.png') repeat left;  
+background: #536E7A url('./perrosygatos2.jpg') repeat center;/*#ED515B rosado*/ 
 }
 
 .contenido{
@@ -34,8 +34,7 @@ background: url('./huellasfondo.png') repeat left;
   height: 100%;
   position: absolute;
   transition: all 0.3s;
-  background-color: #536E7A;/*#ED515B rosado*/
-}
+  }
 .menu-bar{
   cursor: pointer;
 }
@@ -125,7 +124,6 @@ header nav ul li span{
 
 .contenedor{
   width: 100%;
-  background-color: #536E7A;/*#ED515B rosado*/
   float: left;
 }
 .contenedor h2{
@@ -889,6 +887,7 @@ header nav ul li a:hover{
   margin-top: 5px;
   margin-left: 5%;
   background-color: #536E7A;/*#ED515B*/
+
   
 }
 .slider ul{
@@ -910,7 +909,8 @@ header nav ul li a:hover{
 
 
 .contenedor{
-  padding-bottom: 10px;
+  margin-top: 0px;
+  padding-top: 10px;
 }
 .contenedor h2{
   margin-top: 10px;
