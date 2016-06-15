@@ -17,8 +17,33 @@ var options = {
 
 router.get('/adopcion', function(req, res) {
   //console.log(req.user);
-  mascotasController.getMascotas(function(data){
+  mascotasController.getMascotasAdopcion(function(data){
     res.json(data);
+
+  })
+  
+});
+
+router.get('/perdidos', function(req, res) {
+  //console.log(req.user);
+  mascotasController.getMascotasPerdidos(function(data){
+    res.json(data);
+
+  })
+  
+});
+
+router.get('/:id_mascota', function(req, res) {
+  //console.log(req.user);
+  mascotasController.getMascota(req.params.id_mascota,function(data,status){
+  	if(status == 200){
+  		res.status(200).json(data);
+
+  	}else if (status == 400){
+  		res.status(400).json(data);
+
+  	}
+    
 
   })
   
