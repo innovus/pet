@@ -1,21 +1,17 @@
 @import url(./fonts.css);
 
-/*--------------------*/
-
 .contenedor{
   width: 100%;
+  /*background-color: #536E7A;/*#ED515B rosado*/
   float: left;
 }
-.contenedor h2{
-  color: #fff;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-}
 .requisitos{
-  
+  background: #ED515B url('./perros.jpg') repeat left;
   width: 100%;
   float: left;
 }
+
+
 .requisitos h2{
   color: #F6B00C;
   text-align: center;
@@ -26,21 +22,8 @@
   font-family: 'Oswald', sans-serif;
   text-align: center;
 }
-.tipo-mascota h3{
-  color: #F6B00C;
-  font-family: 'Oswald', sans-serif;
-
-}
-
-
-.ordenar{
-
-  font-family: 'Oswald', sans-serif;
-  float: left;
-}
 
 .perfiles{
-  
   width: 100%;
   float: left;
   margin-top: 10px;
@@ -54,7 +37,7 @@
 }
 
 .datos-mascota{
-  text-align: center;
+   text-align: center;
   float: right;
   background-color:rgba(185,193,196,0.6); /*rgba(49,72,106,0.7);*/
 }
@@ -93,7 +76,6 @@
   
 }
 
-
 /*footer*/
 .footer{
   background: #F4F4F4 url('./huellas1.png') repeat left;
@@ -106,37 +88,13 @@
   display: table-row;
   
 }
-.menu_barsito{
-    display: block;
-    width: 100%;
-    background: #49B1AA;
-    height: 60px;
-    color: red;/*#2E4A6D*/
-
-  }
-  .menu_barsito .bt-menu{
-    display: block;
-    padding: 20px;
-    height: 60px;
-    background:#49B1AA url('./huellasfondo.png') repeat center;
-    font-family: 'Oswald', sans-serif;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .menu_barsito span{
-      float:right;
-      font-size:25px;
-      padding-bottom: 10px;
-    }
 
 
 @media only screen and (max-width : 320px) {
-  /* inicio ccontenedor*/
+ 
+
+
+/* inicio ccontenedor*/
 
 .contenedor{
   margin-top: 65px;
@@ -145,62 +103,133 @@
 }
 /*requisitos*/
 
-
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
-  font-size: 17px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
+   
   width: 90%;
   margin-left:5%; 
-  font-size: 14px;
+  font-size: 15px;
   text-align: justify-all;
 
 }
-.tipo-mascota{
-  width: 95%;
-  float: left;
-  background: #ececec;
-  margin-left: 2.5%;
-  padding-bottom: 3px;
-  padding-top: 3px;
-  
 
-}
+/* inicio de sesion y donar */
 
-
-.tipo-mascota input{
-   display:inline-block;
-    width:20%;
-    height:40px;
+  /*registro*/
+  .registro{
+    
+    width: 100%;
     float: left;
-    vertical-align:middle;
-    cursor:pointer;
-    -moz-border-radius:  50%;
-    border-radius:  50%
-    padding-top:5px auto;
+  }
+  .foto-mascota{
+    width: 50%;
+    margin-left: 25%;
+    float: left;
+    border: dashed 1px #fff;
+    margin-top: 10px;
+  }
+  .foto-mascota img{
+    width: 60%;
+    float: left;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+    float: left;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+  }
+  .informacion-registro h2{
+    color: #F6B00C;
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .informacion-registro p{
+    color: #ececec;
+    text-align: justify;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    float: left;
+    background: #E2495B;
+    border: solid 0.1px #fff;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 5px;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+
+  }
+  .boton a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    
+    width: 96%;
+    margin-left: 2%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+
+
+/* fin inicio de sesion y donar */
+
+.dato-info{
+	width: 100%;
+	float: left;
+	
+	text-align:justify;
+  background-color: #F1636A;
+ }
+.dato-info h2{
+	width: 43%;
+	float: left;
+  text-align: right;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+
 }
-.tipo-mascota h3 {
-  color: #2E4A6D;
-  width: 20%;
+.dato-info h3{
+	width: 40%;
+	float: left;
+  text-align: left;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+
+
+}
+
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  width: 100%;
+  text-align: center;
   float: left;
-
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
-/*-----fin requisitos*/
-
-.ordenar{
-  font-size: 17px;
-  width: 95%;
-  height: 40px;
-  margin-left: 2.5%;
-  margin-top: 5px;
-  margin-bottom: 5px;
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 15px;
+  font-family: 'Oswald', sans-serif;
 }
 
 /*----- un---- */
@@ -224,7 +253,6 @@
 .datos-mascota{
   width: 50%;
   height: 180px;
-  text-align: center;
   
 }
 .datos-mascota h2{
@@ -264,24 +292,32 @@
    padding-bottom: 10px;
 }
 
+.btn-buscarmas-mascotas h2{
+  text-align: center;
+  font-size: 17px;
+}
+
 /*footer*/
 .footer{
   height: 80px;
   
 }
 .social-media{
-  width: 50%;
-  margin-left: 25%;
+  width: 90%;
+  margin-left: 8%;
   height: 40px;
 }
 .social-media img{
-  width: 20%;
+  width: 22%;
   margin-top: 10px;
 }
 
   }
 
 @media only screen and (max-width : 480px) and (min-width: 321px) {
+
+
+
  /* inicio ccontenedor*/
 
 .contenedor{
@@ -291,63 +327,69 @@
 }
 /*requisitos*/
 
+
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 20px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 16px;
   text-align: center;
 
 }
-.tipo-mascota{
-  width: 90%;
+
+/*----------------------*/
+.foto-perfil-mascota{
+  width: 99%;
+  height: 220px;
+  margin-left: 0.5%;
   float: left;
   background: #ececec;
-  margin-left: 5%;
-  padding-bottom: 3px;
-  padding-top: 3px;
+}
+
+.dato-info{
+  width: 100%;
+  float: left;
+  
+  text-align:justify;
+ }
+.dato-info h2{
+  width: 45%;
+  float: left;
+  text-align: right;
+  font-size: 15px;
   
 
 }
-
-
-.tipo-mascota input{
-   display:inline-block;
-    width:20%;
-    height:40px;
-    float: left;
-    vertical-align:middle;
-    cursor:pointer;
-    -moz-border-radius:  50%;
-    border-radius:  50%
-    padding-top:5px auto;
-}
-.tipo-mascota h3 {
-  color: #2E4A6D;
-  width: 20%;
+.dato-info h3{
+  width: 40%;
   float: left;
+  text-align: left;
+  font-size: 15px;
+  }
 
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
 }
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+
+
 /*-----fin requisitos*/
-
-.ordenar{
-  font-size: 17px;
-  width: 90%;
-  height: 40px;
-  margin-left: 5%;
-  margin-top: 3px;
-  margin-bottom: 3px;
-
-}
 
 
 /*----- un---- */
@@ -410,6 +452,7 @@
   margin-bottom: 10px;
 }
 
+
 /*footer*/
 .footer{
   height: 80px;
@@ -430,7 +473,9 @@
 }
 
 @media only screen and (max-width : 769px) and (min-width: 479px){
-     
+  
+  
+
 /* inicio ccontenedor*/
 
 .contenedor{
@@ -441,65 +486,64 @@
 /*requisitos*/
 
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 28px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 18px;
   text-align: center;
 
 }
-.tipo-mascota{
-  width: 90%;
+/*----------------------*/
+.foto-perfil-mascota{
+  width: 50%;
+  height: 260px;
+  margin-left: 2%;
   float: left;
   background: #ececec;
-  margin-left: 5%;
-  padding-bottom: 3px;
-  padding-top: 3px;
+}
+  
+/*---------------------*/
+
+.dato-info{
+  width: 100%;
+  float: left;
+  text-align:justify;
+ }
+.dato-info h2{
+  width: 45%;
+  float: left;
+  text-align: right;
+  font-size: 15px;
   
 
 }
-
-
-.tipo-mascota input{
-   display:inline-block;
-    width:15%;
-    height:40px;
-    float: left;
-    vertical-align:middle;
-    cursor:pointer;
-    -moz-border-radius:  50%;
-    border-radius:  50%
-    padding-top:5px auto;
-    margin-left: 10%;
-}
-.tipo-mascota h3 {
-  color: #2E4A6D;
-  width: 15%;
+.dato-info h3{
+  width: 40%;
   float: left;
-  margin-left: 4%;
-
-}
-/*-----fin requisitos*/
-
-.ordenar{
-  font-size: 17px;
-  width: 90%;
-  height: 40px;
-  margin-left: 5%;
-  margin-top: 3px;
-  margin-bottom: 3px;
-
+  text-align: left;
+  font-size: 15px;
 }
 
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+}
 /*----- un---- */
 
 .btn-buscarmas-mascotas{
@@ -543,7 +587,6 @@
   padding-top: 40px;
    width: 50%;
   height: 210px;
-  text-align: center;
   
 }
 .datos-mascota h2{
@@ -589,7 +632,7 @@
 }
 
  @media only screen and (max-width : 992px) and (min-width: 770px) {
-    
+  
 /* inicio ccontenedor*/
 
 .contenedor{
@@ -600,52 +643,65 @@
 /*requisitos*/
 
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 32px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 18px;
   text-align: center;
 
 }
-.tipo-mascota{
-  width: 70%;
+/*----------------------*/
+
+.foto-perfil-mascota{
+  width: 50%;
+   margin-left: 2%;
   float: left;
   background: #ececec;
-  margin-left: 15%;
-  padding-bottom: 3px;
-  padding-top: 3px;
+  padding-bottom: 2px;
+  margin-top: 2px;
+}
+ 
+/*---------------------*/
+
+.dato-info{
+  width: 100%;
+  float: left;
+  text-align:justify;
+ }
+.dato-info h2{
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-size: 18px;
   
 
 }
-
-
-.tipo-mascota input{
-   display:inline-block;
-    width:15%;
-    height:40px;
-    float: left;
-    vertical-align:middle;
-    cursor:pointer;
-    -moz-border-radius:  50%;
-    border-radius:  50%
-    padding-top:5px auto;
-    margin-left: 10%;
-}
-.tipo-mascota h3 {
-  color: #2E4A6D;
-  width: 15%;
+.dato-info h3{
+  width: 40%;
   float: left;
-  margin-left: 4%;
+  text-align: left;
+  font-size: 18px;
+  }
 
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 18px;
+  font-family: 'Oswald', sans-serif;
 }
 /*-----fin requisitos*/
 
@@ -679,7 +735,6 @@
    width: 50%;
   height: 70%;
  padding-top: 80px;
- text-align: center;
   
 }
 .datos-mascota h2{
@@ -718,6 +773,7 @@
   font-size: 17px;
 }
 
+
 /*footer*/
 .footer{
   height: 80px;
@@ -738,105 +794,73 @@
 
 @media only screen and (min-width: 993px){
 /*---------------------------------------*/
-.menu_barsito{
-  display: none;
-}
-header {
-  width: 100%;
-  float: left;
-}
-header nav{
-  width: 90%;
-  margin-left: 5%;
-  float: left;
-}
-header nav ul{
-  overflow: hidden;
-  list-style: none;
-}
-header nav ul li{
-  float: left;
-}
 
-header nav ul li a{
-padding: 20px;
-display: block;
-text-decoration: none;
-}
-header nav ul li span{
-  margin-right:10px;
-}
-
-header nav ul li a:hover{
- border-bottom: 2px solid #F6B00C;
-}
-/*contenedor*/
-
-
+/*----------------*/
 .contenedor{
   padding-bottom: 10px;
+  float: left;
 }
 
+/*requisitos*/
 .requisitos h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
   width: 90%;
   margin-left:5%; 
   font-size: 32px;
   text-align: justify-all;
 }
 .requisitos h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%;
+   width: 90%;
   margin-left:5%; 
   font-size: 18px;
   text-align: center;
 
 }
-.tipo-mascota{
-  width: 40%;
+/*----------------------*/
+.foto-perfil-mascota{
+  width: 60%;
+  margin-left: 7%;
   float: left;
   background: #ececec;
-  margin-left: 30%;
-  padding-bottom: 3px;
-  padding-top: 3px;
+  padding-left: 2px;
+}
+/*---------------------*/
+
+.dato-info{
+  width: 100%;
+  float: left;
+  text-align:justify;
+  background-color: #F1636A;
+ }
+.dato-info h2{
+  width: 47%;
+  float: left;
+  text-align: right;
+  font-size: 18px;
   
 
 }
-
-
-.tipo-mascota input{
-   display:inline-block;
-    width:15%;
-    height:40px;
-    float: left;
-    vertical-align:middle;
-    cursor:pointer;
-    -moz-border-radius:  50%;
-    border-radius:  50%
-    padding-top:5px auto;
-    margin-left: 10%;
-}
-.tipo-mascota h3 {
-  color: #2E4A6D;
-  width: 15%;
+.dato-info h3{
+  width: 40%;
   float: left;
-  margin-left: 4%;
-
+  text-align: left;
+  font-size: 18px;
+  }
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 18px;
+  font-family: 'Oswald', sans-serif;
 }
 /*-----fin requisitos*/
-
-.ordenar{
-  font-size: 17px;
-  width: 40%;
-  height: 40px;
-  margin-left: 30%;
-  margin-top: 3px;
-  margin-bottom: 3px;
-
-}
-
 /*----- un---- */
 .mascota{
   width: 30%;
@@ -902,7 +926,6 @@ header nav ul li a:hover{
   margin-left: 30%;
   
 }
-
 /*footer*/
 .footer{
   height: 80px;

@@ -1,123 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:500,600,400,100);
-@import url(http://fonts.googleapis.com/css?family=Courgette);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Poiret+One|Open+Sans:300,400);
-@import url(https://fonts.googleapis.com/css?family=Lobster);
-@import url(https://fonts.googleapis.com/css?family=Oregano|Finger+Paint|Rancho|Cabin+Condensed|Poppins|Pacifico|Josefin+Sans);
-@import url(https://fonts.googleapis.com/css?family=Oswald|Passion+One|Candal|Sigmar+One|Righteous|Comfortaa|Satisfy);
+@import url(./fonts.css);
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-body{
-background: #536E7A url('./perrosygatos2.jpg') repeat center;/*#ED515B rosado*/ 
-}
 
-.contenido{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: all 0.3s;
-  }
-.menu-bar{
-  cursor: pointer;
-}
-.abrir{
-  transform: translateX(100%);
-}
-/*---------------------------------------*/
-.menu_barsito{
-    display: block;
-    width: 100%;
-    height: 60px;
-    color: #fff;
-
-  }
-  .menu_barsito .bt-menu{
-    display: block;
-    padding: 20px;
-    height: 60px;
-    background: #49B1AA  url('./huellasfondo.png') repeat center;
-    font-family: 'Oswald', sans-serif;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .menu_barsito span{
-      float:right;
-      font-size:25px;
-      padding-bottom: 10px;
-    }
-
-header {
-  width: 100%;
-  background: #49B1AA  url('./huellasfondo.png') repeat center;
-}
-header nav{
-  width: 100%;
-  
-  margin: 10px auto;
-  background: #49B1AA  url('./huellasfondo.png') repeat center;
-}
-header nav ul{
-  overflow: hidden;
-  list-style: none;
-  height: 100%;
- background: #49B1AA  url('./huellasfondo.png') repeat center;
-}
-header nav ul li{
-  float: left;
-}
-
-header nav ul li a{
-color: #fff;
-padding: 20px;
-display: block;
-font-size: 18px;
-text-decoration: none;
- font-family: 'Oswald', sans-serif;
-}
-header nav ul li span{
-  margin-right:10px;
-}
- header nav ul li a:hover{
-    background:#2E4A6D;
-    color: #F6B00C;
-
-}
-@keyframes cambio{
-  0% {margin-left: 0;}
-  20% {margin-left: 0;}
-
-  25% {margin-left: -100%;}
-  45% {margin-left: -100%;}
-
-  50% {margin-left: -200%;}
-  70% {margin-left: -200%;}
-
-  75% {margin-left: -300%;}
-  100% {margin-left: -300%;}
-}
 /*FIN SLIDER*/
 
 
@@ -152,6 +35,7 @@ header nav ul li span{
 }
 
 .datos-mascota{
+  text-align: center;
   float: right;
   background-color:rgba(185,193,196,0.6); /*rgba(49,72,106,0.7);*/
 }
@@ -232,33 +116,7 @@ header nav ul li span{
     }
 
 @media only screen and (max-width : 320px) {
-   header{
-    position: fixed;
-    color: #2E4A6D;
-
- }
-
-  header nav{
-    width: 100%;
-    height:1000%;
-    margin: 0;
-    position: fixed;
-    left: -100%;
-    font-family: 'Oswald', sans-serif;  
-   }
-
-  header nav ul li {
-    display: block;
-    float: none;
-    border-bottom: 1px solid rgba(255,255,255, .3);
-  }
   
-  header nav ul li a:hover{
-    background:#2E4A6D;
-    border-left: 5px solid #F6B00C;
-    color: #F6B00C;
-
-  }
 
 /* inicio slider*/
 .slider{
@@ -290,13 +148,7 @@ header nav ul li span{
   padding-bottom: 10px;
 
 }
-.contenedor h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%;
-  margin-left:5%; 
-  font-size: 24px;
-}
+
 
 .ordenar{
   font-size: 17px;
@@ -304,7 +156,9 @@ header nav ul li span{
   height: 40px;
   margin-left: 2.5%;
 }
-
+.hola{
+  font-size: 22px;
+}
 
 /*----- un---- */
 .mascota{
@@ -353,16 +207,16 @@ header nav ul li span{
 }
 
 .btn-buscarmas-mascotas{
-  width: 90%;  
+  width: 95%;  
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 5%;
+  margin-left: 2.5%;
   padding-top: 5px;
   height: 40px;
    
 }
 .btn-buscarmas-mascotas h2{
-   font-size: 13px;
+   font-size: 16px;
    padding-bottom: 10px;
 }
 
@@ -385,29 +239,6 @@ header nav ul li span{
 
 @media only screen and (max-width : 480px) and (min-width: 321px) {
 
-header{
-    position: fixed;
-    margin-bottom: 15px;
-  }
-
-  header nav{
-    width: 65%;
-    height:1000%;
-    margin: 0;
-    position: fixed;
-    left: -100%;
-       
-  }
-
-  header nav ul li {
-    display: block;
-    float: none;
-    border-bottom: 1px solid rgba(255,255,255, .3);
-  }
-  header nav ul li a:hover{
-  border-left: 5px solid #F6B00C;
-  }
- 
 /* inicio slider*/
 .slider{
   overflow: hidden;
@@ -439,13 +270,7 @@ header{
 .contenedor{
   padding-bottom: 10px;
 }
-.contenedor h2{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%;
-  margin-left:5%; 
-  font-size: 20px;
-}
+
 
 .ordenar{
   font-size: 17px;
@@ -534,30 +359,7 @@ header{
 }
 
 @media only screen and (max-width : 769px) and (min-width: 479px){
-   header{
-    position: fixed;
-    margin-bottom: 15px;
-   }
-
-  header nav{
-    width: 65%;
-    height:1000%;
-    margin: 0;
-    position: fixed;
-    left: -100%;
-        
-  }
-
-  header nav ul li {
-    display: block;
-    float: none;
-    border-bottom: 1px solid rgba(255,255,255, .3);
-  }
-  header nav ul li a:hover{
-    border-left: 5px solid #F6B00C;
-  }
-  
-
+   
  /* inicio slider*/
 .slider{
   overflow: hidden;
@@ -692,28 +494,7 @@ header{
 }
 
  @media only screen and (max-width : 992px) and (min-width: 770px) {
-   header{
-    position: fixed;
-    margin-bottom: 15px;
-   }
-
-  header nav{
-    width: 45%;
-    height:1000%;
-    margin: 0;
-    position: fixed;
-    left: -100%;   
-  }
-
-  header nav ul li {
-    display: block;
-    float: none;
-    border-bottom: 1px solid rgba(255,255,255, .3);
-  }
-  header nav ul li a:hover{
-  border-left: 5px solid #F6B00C;
-  }
-  
+     
 /* inicio slider*/
 .slider{
   overflow: hidden;
@@ -839,7 +620,6 @@ header{
 
 @media only screen and (min-width: 993px){
 /*---------------------------------------*/
-
 .menu_barsito{
   display: none;
 }
@@ -849,7 +629,7 @@ header {
 }
 header nav{
   width: 90%;
-  margin-left: 10%;
+  margin-left: 5%;
   float: left;
 }
 header nav ul{
@@ -861,9 +641,8 @@ header nav ul li{
 }
 
 header nav ul li a{
-padding: 20px;
+padding: 25px;
 display: block;
-font-size: 18px;
 text-decoration: none;
 }
 header nav ul li span{
@@ -873,7 +652,6 @@ header nav ul li span{
 header nav ul li a:hover{
  border-bottom: 2px solid #F6B00C;
 }
-
 
 
 /*----------------*/
