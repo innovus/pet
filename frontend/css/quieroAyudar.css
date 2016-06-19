@@ -97,7 +97,7 @@
 /* inicio ccontenedor*/
 
 .contenedor{
-  margin-top: 65px;
+  margin-top: 60px;
   padding-bottom: 10px;
 
 }
@@ -189,8 +189,67 @@
     text-align: center;
   }
 
+/**/
+
+/**/
+/*para la ventana modal*/ 
+    .modalmask {
+      
+      width: 100%;
+      padding-bottom: 10px;
+    }
+    .modalmask:target {
+      
+    }
+    
+    .modalbox{
+        width: 95%;
+    }
 
 
+  .modalmask:target .resize{
+    width:400px;
+    
+  }
+  .logoSesion{
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 5px; 
+  }
+  .logoSesion img{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .tituloSesion{
+    width: 60%;
+    height: 50px;
+  }
+  .tituloSesion h2{
+    padding-top: 15px;
+    font-size: 17px;
+  }
+
+  .salirSesion{
+    height: 50px;
+    width: 15%;
+  }
+  .salirSesion img{
+    width: 60%;
+    height: 25px;
+    padding-top: 10px;
+  }
+
+  .contenedorFromulario{
+    width: 100%;
+    background: #536E7A;
+    height: 100px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  
 /* fin inicio de sesion y donar */
 
 .dato-info{
@@ -321,7 +380,7 @@ color: #fff;
  /* inicio ccontenedor*/
 
 .contenedor{
-  margin-top: 65px;
+  margin-top: 60px;
   padding-bottom: 10px;
 
 }
@@ -479,7 +538,7 @@ color: #fff;
 /* inicio ccontenedor*/
 
 .contenedor{
-  margin-top: 65px;
+  margin-top: 60px;
   padding-bottom: 10px;
 
 }
@@ -636,7 +695,7 @@ color: #fff;
 /* inicio ccontenedor*/
 
 .contenedor{
-  margin-top: 65px;
+  margin-top: 60px;
   padding-bottom: 10px;
 
 }

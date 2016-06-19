@@ -176,7 +176,108 @@ header nav ul li span{
   border-left: 5px solid #F6B00C;
   }
 }
+/*---------------------------------------------*/
+/*para la ventana modal*/ 
+    .modalmask {
+      
+      position: fixed;
+      float: left;
+      font-family: Arial, sans-serif;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background:rgba(0,0,0,0.70);
+      z-index: 99999;
+      opacity:0;
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+      pointer-events: none;
 
+    }
+    .modalmask:target {
+      opacity:1;
+      pointer-events: auto;
+    }
+    
+    .modalbox{
+
+        position: relative;
+        /*padding: 5px 20px 13px 20px;*/
+        background: #fff;
+        border-radius:5px;
+        -webkit-transition: all 500ms ease-in;
+        -moz-transition: all 500ms ease-in;
+        transition: all 500ms ease-in;
+        margin:10px auto;
+      
+      
+    }
+
+    .rotate {
+      margin: 10% auto;
+      -webkit-transform: scale(-5,-5); 
+      transform: scale(-5,-5);
+    }
+    
+    .modalmask:target .movedown{    
+      margin:10% auto;
+    }
+    .modalmask:target .rotate{    
+      transform: rotate(360deg) scale(1,1);
+        -webkit-transform: rotate(360deg) scale(1,1);
+    }
+
+  .modalmask:target .resize{
+    width:400px;
+    height:200px;
+  }
+  
+  .close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:3px;
+    font-size:16px;
+  }
+
+  .close:hover { 
+    background: #FAAC58; 
+    color:#222;
+  }
+
+
+  .logoSesion{
+    float: left;
+    background: #ED515B url('./perros.jpg') repeat left;
+  }
+  
+  .tituloSesion{
+    background: #ED515B url('./perros.jpg') repeat left;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: #ffebee;
+    float: left;  
+
+  }
+  
+  .salirSesion{
+    background: #ED515B url('./perros.jpg') repeat left;
+    float: left;
+    border-top-right-radius: 5px;
+
+  }
+  .salirSesion img{
+
+  }
 /*---------------------------------------------*/
 
 @media only screen and (max-width : 769px) and (min-width: 479px){
