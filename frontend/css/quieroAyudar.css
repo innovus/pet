@@ -30,6 +30,187 @@
   margin-bottom: 10px;
 
 }
+/* inicio de sesion y donar */
+
+  /*registro*/
+  
+  .foto-mascota{
+    width: 50%;
+    margin-left: 25%;
+    float: left;
+    border: dashed 1px #fff;
+    margin-top: 10px;
+  }
+  .foto-mascota img{
+    width: 60%;
+    float: left;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+    float: left;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+  }
+  .informacion-registro h2{
+    color: #F6B00C;
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .informacion-registro p{
+    color: #ececec;
+    text-align: justify;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    float: left;
+    background: #E2495B;
+    border: solid 0.1px #fff;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 5px;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+
+  }
+  .boton a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    
+    width: 96%;
+    margin-left: 2%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .contenedorFromulario{
+    width: 100%;
+    background: #49B1AA url('./huellasfondo.png') repeat left;;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+  }
+/**/
+/*iniciar sesion y donar*/
+/*registro*/
+  .registro{
+    
+    width: 100%;
+    float: left;
+  }
+  .foto-mascota{
+    float: left;
+    border: dashed 1px #fff;
+  }
+  .foto-mascota img{
+   float: left;
+   }
+  .informacion-registro{
+    float: left;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+  }
+  .informacion-registro h2{
+    color: #F6B00C;
+  }
+  .informacion-registro p{
+    color: #ececec;
+    text-align: justify;
+
+  }
+  .boton{
+    float: left;
+    background: #E2495B;
+    border: solid 0.1px #fff;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    cursor: pointer;
+
+  }
+  .boton a{
+    text-decoration: none;
+    color: #fff;
+  }
+  /*donar*/
+  .donar{
+    float: left;
+    text-align: center;
+  }
+/*----------------------------*/
+  .dato{
+    float: left;
+    text-align: center;
+  }
+  .dato input{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ED515B;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .dato select{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ED515B;
+    border: none;
+    border-radius: 4px;
+
+  }
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    float: left;
+    text-align: center;
+  }
+  .dato-fb input{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background: #3b5998;
+  }
+
+   .dato-btn{
+    float: left;
+    text-align: center;
+  }
+  .dato-btn input{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #F6B00C;
+    border: none;
+    border-radius: 4px;
+    background: #ED515B;
+  }
 /*----- un---- */
 .mascota{
   float: left;
@@ -128,13 +309,11 @@
   .foto-mascota{
     width: 50%;
     margin-left: 25%;
-    float: left;
-    border: dashed 1px #fff;
-    margin-top: 10px;
+    margin-top: 25px;
+    margin-bottom: 5px;
   }
   .foto-mascota img{
     width: 60%;
-    float: left;
     margin-left: 20%;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -143,39 +322,21 @@
   .informacion-registro{
     width: 96%;
     margin-left: 2%;
-    float: left;
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
   }
   .informacion-registro h2{
-    color: #F6B00C;
     font-size: 22px;
     margin-top: 5px;
     margin-bottom: 5px;
 
   }
-  .informacion-registro p{
-    color: #ececec;
-    text-align: justify;
-
-  }
   .boton{
     width: 90%;
     margin-left: 5%;
-    float: left;
-    background: #E2495B;
-    border: solid 0.1px #fff;
-    font-family: 'Oswald', sans-serif;
     margin-top: 5px;
-    text-align: center;
     padding-top: 4px;
     padding-bottom: 4px;
-    cursor: pointer;
-
   }
   .boton a{
-    text-decoration: none;
-    color: #fff;
     font-size: 20px;
     }
   /*donar*/
@@ -183,33 +344,24 @@
     
     width: 96%;
     margin-left: 2%;
-    float: left;
     margin-top: 10px;
     margin-bottom: 10px;
-    text-align: center;
   }
 
 /**/
 
 /**/
 /*para la ventana modal*/ 
-    .modalmask {
-      
+  .modalmask {
       width: 100%;
       padding-bottom: 10px;
-    }
-    .modalmask:target {
-      
-    }
-    
-    .modalbox{
+  }
+       
+  .modalbox{
         width: 95%;
-    }
-
-
+  }
   .modalmask:target .resize{
-    width:400px;
-    
+    width:400px;  
   }
   .logoSesion{
     width: 25%;
@@ -241,15 +393,28 @@
     padding-top: 10px;
   }
 
-  .contenedorFromulario{
-    width: 100%;
-    background: #536E7A;
-    height: 100px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+  .dato{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
   }
-
-  
+ 
+   
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+  .dato-btn{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
 /* fin inicio de sesion y donar */
 
 .dato-info{
@@ -265,8 +430,8 @@
   text-align: right;
   font-size: 15px;
   font-family: 'Oswald', sans-serif;
-
 }
+
 .dato-info h3{
 	width: 40%;
 	float: left;
@@ -400,7 +565,124 @@ color: #fff;
   text-align: center;
 
 }
+/* inicio de sesion y donar */
+  .registro{
+    
+    width: 100%;
+    float: left;
+  }
+  /*registro*/
+ 
+  .foto-mascota{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  .foto-mascota img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+  }
+  .informacion-registro h2{
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .boton a{
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+/**/
+
+/**/
+/*para la ventana modal*/ 
+  .modalmask {
+      width: 100%;
+      padding-bottom: 10px;
+  }
+       
+  .modalbox{
+        width: 95%;
+  }
+  .modalmask:target .resize{
+    width:400px;  
+  }
+  .logoSesion{
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 5px; 
+  }
+  .logoSesion img{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .tituloSesion{
+    width: 60%;
+    height: 50px;
+  }
+  .tituloSesion h2{
+    padding-top: 15px;
+    font-size: 17px;
+  }
+
+  .salirSesion{
+    height: 50px;
+    width: 15%;
+  }
+  .salirSesion img{
+    width: 60%;
+    height: 25px;
+    padding-top: 10px;
+  }
+
+  .dato{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+ 
+   
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+  .dato-btn{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+/* fin inicio de sesion y donar */
 /*----------------------*/
 .foto-perfil-mascota{
   width: 99%;
@@ -557,6 +839,126 @@ color: #fff;
   text-align: center;
 
 }
+
+/* inicio de sesion y donar */
+
+  /*registro*/
+  .registro{
+    
+    width: 45%;
+    margin-left: 2.5%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .foto-mascota{
+    width: 50%;
+    margin-left:25%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  .foto-mascota img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+  }
+  .informacion-registro h2{
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .boton a{
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+/**/
+
+/**/
+/*para la ventana modal*/ 
+  .modalmask {
+      width: 100%;
+      padding-bottom: 10px;
+  }
+       
+  .modalbox{
+        width: 70%;
+  }
+  .modalmask:target .resize{
+    width:400px;  
+  }
+  .logoSesion{
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 5px; 
+  }
+  .logoSesion img{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .tituloSesion{
+    width: 60%;
+    height: 50px;
+  }
+  .tituloSesion h2{
+    padding-top: 15px;
+    font-size: 17px;
+  }
+
+  .salirSesion{
+    height: 50px;
+    width: 15%;
+  }
+  .salirSesion img{
+    width: 60%;
+    height: 25px;
+    padding-top: 10px;
+  }
+
+  .dato{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+ 
+   
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+  .dato-btn{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+/* fin inicio de sesion y donar */
 /*----------------------*/
 .foto-perfil-mascota{
   width: 50%;
@@ -714,6 +1116,125 @@ color: #fff;
   text-align: center;
 
 }
+/* inicio de sesion y donar */
+
+  /*registro*/
+  .registro{
+    
+    width: 45%;
+    margin-left: 2.5%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .foto-mascota{
+    width: 50%;
+    margin-left:25%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  .foto-mascota img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+  }
+  .informacion-registro h2{
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .boton a{
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+/**/
+
+/**/
+/*para la ventana modal*/ 
+  .modalmask {
+      width: 100%;
+      padding-bottom: 10px;
+  }
+       
+  .modalbox{
+        width: 50%;
+  }
+  .modalmask:target .resize{
+    width:400px;  
+  }
+  .logoSesion{
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 5px; 
+  }
+  .logoSesion img{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .tituloSesion{
+    width: 60%;
+    height: 50px;
+  }
+  .tituloSesion h2{
+    padding-top: 15px;
+    font-size: 17px;
+  }
+
+  .salirSesion{
+    height: 50px;
+    width: 15%;
+  }
+  .salirSesion img{
+    width: 60%;
+    height: 25px;
+    padding-top: 10px;
+  }
+
+  .dato{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+ 
+   
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+  .dato-btn{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+/* fin inicio de sesion y donar */
 /*----------------------*/
 
 .foto-perfil-mascota{
@@ -874,6 +1395,125 @@ color: #fff;
   text-align: center;
 
 }
+/* inicio de sesion y donar */
+
+  /*registro*/
+  .registro{
+    
+    width: 45%;
+    margin-left: 2.5%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .foto-mascota{
+    width: 50%;
+    margin-left:25%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  .foto-mascota img{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+  }
+  .informacion-registro h2{
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .boton a{
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+/**/
+
+/**/
+/*para la ventana modal*/ 
+  .modalmask {
+      width: 100%;
+      padding-bottom: 10px;
+  }
+       
+  .modalbox{
+        width: 30%;
+  }
+  .modalmask:target .resize{
+    width:400px;  
+  }
+  .logoSesion{
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 5px; 
+  }
+  .logoSesion img{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .tituloSesion{
+    width: 60%;
+    height: 50px;
+  }
+  .tituloSesion h2{
+    padding-top: 15px;
+    font-size: 17px;
+  }
+
+  .salirSesion{
+    height: 50px;
+    width: 15%;
+  }
+  .salirSesion img{
+    width: 60%;
+    height: 25px;
+    padding-top: 10px;
+  }
+
+  .dato{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+ 
+   
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+  .dato-btn{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+/* fin inicio de sesion y donar */
 /*----------------------*/
 .foto-perfil-mascota{
   width: 60%;
