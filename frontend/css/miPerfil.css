@@ -1,0 +1,1644 @@
+@import url(./fonts.css);
+
+.contenedor{
+  width: 100%;
+  /*background-color: #536E7A;/*#ED515B rosado*/
+  float: left;
+}
+.requisitos{
+  background: #ED515B url('./perros.jpg') repeat left;
+  width: 100%;
+  float: left;
+}
+
+
+.requisitos h2{
+  color: #F6B00C;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+.requisitos h3{
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.perfiles{
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+/* inicio de sesion y donar */
+
+  /*registro*/
+  
+  .foto-mascota{
+    width: 50%;
+    margin-left: 25%;
+    float: left;
+    border: dashed 1px #fff;
+    margin-top: 10px;
+  }
+  .foto-mascota img{
+    width: 60%;
+    float: left;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+    float: left;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+  }
+  .informacion-registro h2{
+    color: #F6B00C;
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .informacion-registro p{
+    color: #ececec;
+    text-align: justify;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    float: left;
+    background: #E2495B;
+    border: solid 0.1px #fff;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 5px;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+
+  }
+  .boton a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    
+    width: 96%;
+    margin-left: 2%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .contenedorFromulario{
+    width: 100%;
+    background: #49B1AA url('./huellasfondo.png') repeat left;;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+  }
+/**/
+/*iniciar sesion y donar*/
+/*registro*/
+  .registro{
+    
+    width: 100%;
+    float: left;
+  }
+  .foto-mascota{
+    float: left;
+    border: dashed 1px #fff;
+  }
+  .foto-mascota img{
+   float: left;
+   }
+  .informacion-registro{
+    float: left;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+  }
+  .informacion-registro h2{
+    color: #F6B00C;
+  }
+  .informacion-registro p{
+    color: #ececec;
+    text-align: justify;
+
+  }
+  .boton{
+    float: left;
+    background: #E2495B;
+    border: solid 0.1px #fff;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    cursor: pointer;
+
+  }
+  .boton a{
+    text-decoration: none;
+    color: #fff;
+  }
+  /*donar*/
+  .donar{
+    float: left;
+    text-align: center;
+  }
+/*----------------------------*/
+  .dato{
+    float: left;
+    text-align: center;
+  }
+  .dato input{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ED515B;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .dato select{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ED515B;
+    border: none;
+    border-radius: 4px;
+
+  }
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    float: left;
+    text-align: center;
+  }
+  .dato-fb input{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background: #3b5998;
+  }
+
+   .dato-btn{
+    float: left;
+    text-align: center;
+  }
+  .dato-btn input{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #F6B00C;
+    border: none;
+    border-radius: 4px;
+    background: #ED515B;
+  }
+/*----- un---- */
+.mascota{
+  float: left;
+ background-color:rgba(185,193,196,1); /*rgba(49,72,106,0.7);*/
+}
+
+.datos-mascota{
+   text-align: center;
+  float: right;
+  background-color:rgba(185,193,196,0.6); /*rgba(49,72,106,0.7);*/
+}
+.datos-mascota h2{
+   color: #536E7A;
+   font-family: 'Oswald', sans-serif; 
+  }
+.datos-mascota h3{
+ color:#536E7A;
+ font-family: 'Oswald', sans-serif; 
+ }
+
+.btn-conoceme{
+  background-color: #F6B00C;
+  float: left;
+  text-align: center;
+}
+
+.btn-conoceme h2 a{
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-buscarmas-mascotas{
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  float: left;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #F1636A;
+  border: dashed 1px #fff;
+  text-align: center;
+  padding-bottom: 5px;
+  
+}
+
+/*footer*/
+.footer{
+  background: #F4F4F4 url('./huellas1.png') repeat left;
+  color: #fff;
+  width: 100%;float: left;
+  clear: both;
+  display: table-row;
+  float: left;
+  clear: both;
+  display: table-row;
+  
+}
+
+
+@media only screen and (max-width : 320px) {
+ 
+
+
+/* inicio ccontenedor*/
+
+.contenedor{
+  margin-top: 60px;
+  padding-bottom: 10px;
+
+}
+/*requisitos*/
+
+.requisitos h2{
+  width: 90%;
+  margin-left:5%; 
+  text-align: justify-all;
+}
+.requisitos h3{
+   
+  width: 90%;
+  margin-left:5%; 
+  font-size: 15px;
+  text-align: justify-all;
+
+}
+
+/* inicio de sesion y donar */
+
+  /*registro*/
+  .registro{
+    
+    width: 100%;
+    float: left;
+  }
+  .foto-mascota{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  .foto-mascota img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+  }
+  .informacion-registro h2{
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .boton a{
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+/**/
+
+/**/
+/*para la ventana modal*/ 
+  .modalmask {
+      width: 100%;
+      padding-bottom: 10px;
+  }
+       
+  .modalbox{
+        width: 95%;
+  }
+  .modalmask:target .resize{
+    width:400px;  
+  }
+  .logoSesion{
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 5px; 
+  }
+  .logoSesion img{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .tituloSesion{
+    width: 60%;
+    height: 50px;
+  }
+  .tituloSesion h2{
+    padding-top: 15px;
+    font-size: 17px;
+  }
+
+  .salirSesion{
+    height: 50px;
+    width: 15%;
+  }
+  .salirSesion img{
+    width: 60%;
+    height: 25px;
+    padding-top: 10px;
+  }
+
+  .dato{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+ 
+   
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+  .dato-btn{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+/* fin inicio de sesion y donar */
+
+.dato-info{
+	width: 100%;
+	float: left;
+	
+	text-align:justify;
+  background-color: #F1636A;
+ }
+.dato-info h2{
+	width: 43%;
+	float: left;
+  text-align: right;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.dato-info h3{
+	width: 40%;
+	float: left;
+  text-align: left;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+
+
+}
+
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  width: 100%;
+  text-align: center;
+  float: left;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+
+/*----- un---- */
+.mascota{
+  width: 95%;
+  margin-left: 2.5%;
+  height:200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.img-fondo{
+  background-color: #CED8D9;/*#2E4A6D;*/
+  width: 95%;
+  margin-left: 2.5%;
+  height: 180px;
+  margin-top: 10px;
+  float: left;
+ 
+
+}
+.datos-mascota{
+  width: 50%;
+  height: 180px;
+  
+}
+.datos-mascota h2{
+  font-size: 25px;
+   margin-left: 3%;
+   width: 90%;
+
+}
+.datos-mascota h3{
+  font-size: 18px;
+ margin-left: 7%;
+}
+
+.btn-conoceme{
+  width: 90%;  
+  margin-left: 5%;
+  margin-top: 40px;
+
+}
+
+.btn-conoceme h2{
+  font-size: 15px;
+  
+}
+
+.btn-buscarmas-mascotas{
+  width: 90%;  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  padding-top: 5px;
+  height: 40px;
+   
+}
+.btn-buscarmas-mascotas h2{
+   font-size: 13px;
+   padding-bottom: 10px;
+}
+
+.btn-buscarmas-mascotas h2{
+  text-align: center;
+  font-size: 17px;
+}
+
+/*footer*/
+.footer{
+  height: 80px;
+  
+}
+.social-media{
+  width: 90%;
+  margin-left: 8%;
+  height: 40px;
+}
+.social-media img{
+  width: 22%;
+  margin-top: 10px;
+}
+
+  }
+
+@media only screen and (max-width : 480px) and (min-width: 321px) {
+
+
+
+ /* inicio ccontenedor*/
+
+.contenedor{
+  margin-top: 60px;
+  padding-bottom: 10px;
+
+}
+/*requisitos*/
+
+
+.requisitos h2{
+  width: 90%;
+  margin-left:5%; 
+  font-size: 20px;
+  text-align: justify-all;
+}
+.requisitos h3{
+  width: 90%;
+  margin-left:5%; 
+  font-size: 16px;
+  text-align: center;
+
+}
+/* inicio de sesion y donar */
+  .registro{
+    
+    width: 100%;
+    float: left;
+  }
+  /*registro*/
+ 
+  .foto-mascota{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  .foto-mascota img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+  }
+  .informacion-registro h2{
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .boton a{
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+/**/
+
+/**/
+/*para la ventana modal*/ 
+  .modalmask {
+      width: 100%;
+      padding-bottom: 10px;
+  }
+       
+  .modalbox{
+        width: 95%;
+  }
+  .modalmask:target .resize{
+    width:400px;  
+  }
+  .logoSesion{
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 5px; 
+  }
+  .logoSesion img{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .tituloSesion{
+    width: 60%;
+    height: 50px;
+  }
+  .tituloSesion h2{
+    padding-top: 15px;
+    font-size: 17px;
+  }
+
+  .salirSesion{
+    height: 50px;
+    width: 15%;
+  }
+  .salirSesion img{
+    width: 60%;
+    height: 25px;
+    padding-top: 10px;
+  }
+
+  .dato{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+ 
+   
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+  .dato-btn{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+/* fin inicio de sesion y donar */
+/*----------------------*/
+.foto-perfil-mascota{
+  width: 99%;
+  height: 220px;
+  margin-left: 0.5%;
+  float: left;
+  background: #ececec;
+}
+
+.dato-info{
+  width: 100%;
+  float: left;
+  
+  text-align:justify;
+ }
+.dato-info h2{
+  width: 45%;
+  float: left;
+  text-align: right;
+  font-size: 15px;
+  
+
+}
+.dato-info h3{
+  width: 40%;
+  float: left;
+  text-align: left;
+  font-size: 15px;
+  }
+
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+/*-----fin requisitos*/
+
+
+/*----- un---- */
+.mascota{
+  width: 88%;
+  margin-left: 6%;
+  height:210px;
+  margin-top: 10px;
+  padding-top: 10px;
+  }
+.img-fondo{
+  width: 95%;
+  margin-left: 2.5%;
+  height: 90%;
+  }
+
+
+.datos-mascota{
+  width: 50%;
+  height: 90%;
+  padding-top: 40px;
+  text-align: center;
+  
+}
+.datos-mascota h2{
+  font-size: 25px;
+  margin-left: 3%;
+  width: 90%;
+
+}
+.datos-mascota h3{
+ font-size: 18px;
+ margin-left: 7%;
+}
+
+.btn-conoceme{
+  width: 90%;  
+  margin-left: 7%;
+  margin-top: 10px;
+
+}
+
+.btn-conoceme h2{
+  font-size: 15px;
+  
+}
+
+.btn-buscarmas-mascotas{
+  width: 90%;  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  padding-top: 7px;
+  height: 50px;
+   
+}
+.btn-buscarmas-mascotas h2{
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+
+/*footer*/
+.footer{
+  height: 80px;
+  
+}
+.social-media{
+  width: 50%;
+  margin-left: 25%;
+  height: 40px;
+}
+.social-media img{
+  width: 20%;
+  margin-top: 10px;
+}
+
+
+
+}
+
+@media only screen and (max-width : 769px) and (min-width: 479px){
+  
+  
+
+/* inicio ccontenedor*/
+
+.contenedor{
+  margin-top: 60px;
+  padding-bottom: 10px;
+
+}
+/*requisitos*/
+
+.requisitos h2{
+  width: 90%;
+  margin-left:5%; 
+  font-size: 28px;
+  text-align: justify-all;
+}
+.requisitos h3{
+  width: 90%;
+  margin-left:5%; 
+  font-size: 18px;
+  text-align: center;
+
+}
+
+/* inicio de sesion y donar */
+
+  /*registro*/
+  .registro{
+    
+    width: 45%;
+    margin-left: 2.5%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .foto-mascota{
+    width: 50%;
+    margin-left:25%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  .foto-mascota img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+  }
+  .informacion-registro h2{
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .boton a{
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+/**/
+
+/**/
+/*para la ventana modal*/ 
+  .modalmask {
+      width: 100%;
+      padding-bottom: 10px;
+  }
+       
+  .modalbox{
+        width: 70%;
+  }
+  .modalmask:target .resize{
+    width:400px;  
+  }
+  .logoSesion{
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 5px; 
+  }
+  .logoSesion img{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .tituloSesion{
+    width: 60%;
+    height: 50px;
+  }
+  .tituloSesion h2{
+    padding-top: 15px;
+    font-size: 17px;
+  }
+
+  .salirSesion{
+    height: 50px;
+    width: 15%;
+  }
+  .salirSesion img{
+    width: 60%;
+    height: 25px;
+    padding-top: 10px;
+  }
+
+  .dato{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+ 
+   
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+  .dato-btn{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+/* fin inicio de sesion y donar */
+/*----------------------*/
+.foto-perfil-mascota{
+  width: 50%;
+  height: 260px;
+  margin-left: 2%;
+  float: left;
+  background: #ececec;
+}
+  
+/*---------------------*/
+
+.dato-info{
+  width: 100%;
+  float: left;
+  text-align:justify;
+ }
+.dato-info h2{
+  width: 45%;
+  float: left;
+  text-align: right;
+  font-size: 15px;
+  
+
+}
+.dato-info h3{
+  width: 40%;
+  float: left;
+  text-align: left;
+  font-size: 15px;
+}
+
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+}
+/*----- un---- */
+
+.btn-buscarmas-mascotas{
+  width: 90%;  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  padding-top: 7px;
+  height: 60px;
+  
+  
+}
+.btn-buscarmas-mascotas h2{
+  text-align: center;
+  font-size: 17px;
+}
+.btn-buscarmas-mascotas h2{
+  text-align: center;
+  font-size: 17px;
+}
+
+
+.mascota{
+  width: 70%;
+  margin-left: 15%;
+  height:270px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+
+.img-fondo{
+  width: 95%;
+  margin-left: 2.5%;
+  height: 250px;
+  margin-top: 10px;
+  float: left;
+}
+
+
+.datos-mascota{
+  padding-top: 40px;
+   width: 50%;
+  height: 210px;
+  
+}
+.datos-mascota h2{
+  font-size: 25px;
+   margin-left: 3%;
+   width: 90%;
+
+}
+.datos-mascota h3{
+  font-size: 18px;
+ margin-left: 7%;
+}
+
+.btn-conoceme{
+  width: 90%;  
+  margin-left: 7%;
+  margin-top: 5px;
+
+}
+
+.btn-conoceme h2{
+  font-size: 15px;
+  
+}
+/*footer*/
+.footer{
+  height: 80px;
+  
+}
+.social-media{
+  width: 50%;
+  margin-left: 25%;
+  height: 40px;
+}
+.social-media img{
+  width: 20%;
+  margin-top: 10px;
+}
+
+
+
+
+}
+
+ @media only screen and (max-width : 992px) and (min-width: 770px) {
+  
+/* inicio ccontenedor*/
+
+.contenedor{
+  margin-top: 60px;
+  padding-bottom: 10px;
+
+}
+/*requisitos*/
+
+.requisitos h2{
+  width: 90%;
+  margin-left:5%; 
+  font-size: 32px;
+  text-align: justify-all;
+}
+.requisitos h3{
+  width: 90%;
+  margin-left:5%; 
+  font-size: 18px;
+  text-align: center;
+
+}
+/* inicio de sesion y donar */
+
+  /*registro*/
+  .registro{
+    
+    width: 45%;
+    margin-left: 2.5%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .foto-mascota{
+    width: 50%;
+    margin-left:25%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  .foto-mascota img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+  }
+  .informacion-registro h2{
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .boton a{
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+/**/
+
+/**/
+/*para la ventana modal*/ 
+  .modalmask {
+      width: 100%;
+      padding-bottom: 10px;
+  }
+       
+  .modalbox{
+        width: 50%;
+  }
+  .modalmask:target .resize{
+    width:400px;  
+  }
+  .logoSesion{
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 5px; 
+  }
+  .logoSesion img{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .tituloSesion{
+    width: 60%;
+    height: 50px;
+  }
+  .tituloSesion h2{
+    padding-top: 15px;
+    font-size: 17px;
+  }
+
+  .salirSesion{
+    height: 50px;
+    width: 15%;
+  }
+  .salirSesion img{
+    width: 60%;
+    height: 25px;
+    padding-top: 10px;
+  }
+
+  .dato{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+ 
+   
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+  .dato-btn{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+/* fin inicio de sesion y donar */
+/*----------------------*/
+
+.foto-perfil-mascota{
+  width: 50%;
+   margin-left: 2%;
+  float: left;
+  background: #ececec;
+  padding-bottom: 2px;
+  margin-top: 2px;
+}
+ 
+/*---------------------*/
+
+.dato-info{
+  width: 100%;
+  float: left;
+  text-align:justify;
+ }
+.dato-info h2{
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-size: 18px;
+  
+
+}
+.dato-info h3{
+  width: 40%;
+  float: left;
+  text-align: left;
+  font-size: 18px;
+  }
+
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+}
+/*-----fin requisitos*/
+
+.ordenar{
+  font-size: 17px;
+  width: 70%;
+  height: 40px;
+  margin-left: 15%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+
+}
+
+/*----- un---- */
+.mascota{
+  width: 47%;
+  margin-left: 2.5%;
+  height:270px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  }
+.img-fondo{
+  width: 95%;
+  margin-left: 2.5%;
+  height: 90%;
+  margin-top: 2.5%;
+  
+}
+.datos-mascota{
+   width: 50%;
+  height: 70%;
+ padding-top: 80px;
+  
+}
+.datos-mascota h2{
+  font-size: 25px;
+   margin-left: 3%;
+   width: 90%;
+
+}
+.datos-mascota h3{
+  font-size: 18px;
+ margin-left: 7%;
+}
+
+.btn-conoceme{
+  width: 90%;  
+  margin-left: 7%;
+  margin-top: 5px;
+
+}
+
+.btn-conoceme h2{
+  font-size: 15px;
+  
+}
+.btn-buscarmas-mascotas{
+  width: 90%;  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  padding-top: 7px;
+  height: 60px;
+ 
+}
+.btn-buscarmas-mascotas h2{
+  text-align: center;
+  font-size: 17px;
+}
+
+
+/*footer*/
+.footer{
+  height: 80px;
+  
+}
+.social-media{
+  width: 20%;
+  margin-left: 40%;
+  height: 40px;
+}
+.social-media img{
+  width: 20%;
+  margin-top: 10px;
+}
+
+
+}
+
+@media only screen and (min-width: 993px){
+/*---------------------------------------*/
+
+/*----------------*/
+.contenedor{
+  padding-bottom: 10px;
+  float: left;
+}
+
+/*requisitos*/
+.requisitos h2{
+  width: 90%;
+  margin-left:5%; 
+  font-size: 32px;
+  text-align: justify-all;
+}
+.requisitos h3{
+   width: 90%;
+  margin-left:5%; 
+  font-size: 18px;
+  text-align: center;
+
+}
+/* inicio de sesion y donar */
+
+  /*registro*/
+  .registro{
+    
+    width: 45%;
+    margin-left: 2.5%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .foto-mascota{
+    width: 50%;
+    margin-left:25%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  .foto-mascota img{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .informacion-registro{
+    width: 96%;
+    margin-left: 2%;
+  }
+  .informacion-registro h2{
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+  .boton{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .boton a{
+    font-size: 20px;
+    }
+  /*donar*/
+  .donar{
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+/**/
+
+/**/
+/*para la ventana modal*/ 
+  .modalmask {
+      width: 100%;
+      padding-bottom: 10px;
+  }
+       
+  .modalbox{
+        width: 30%;
+  }
+  .modalmask:target .resize{
+    width:400px;  
+  }
+  .logoSesion{
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 5px; 
+  }
+  .logoSesion img{
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .tituloSesion{
+    width: 60%;
+    height: 50px;
+  }
+  .tituloSesion h2{
+    padding-top: 15px;
+    font-size: 17px;
+  }
+
+  .salirSesion{
+    height: 50px;
+    width: 15%;
+  }
+  .salirSesion img{
+    width: 60%;
+    height: 25px;
+    padding-top: 10px;
+  }
+
+  .dato{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+ 
+   
+  .dato h2{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .dato-fb{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+  .dato-btn{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+  }
+/* fin inicio de sesion y donar */
+/*----------------------*/
+.foto-perfil-mascota{
+  width: 60%;
+  margin-left: 7%;
+  float: left;
+  background: #ececec;
+  padding-left: 2px;
+}
+/*---------------------*/
+
+.dato-info{
+  width: 100%;
+  float: left;
+  text-align:justify;
+  background-color: #F1636A;
+ }
+.dato-info h2{
+  width: 47%;
+  float: left;
+  text-align: right;
+  font-size: 18px;
+  
+
+}
+.dato-info h3{
+  width: 40%;
+  float: left;
+  text-align: left;
+  font-size: 18px;
+  }
+.titulo-ver-otras-pets{
+  background-color: #F6B00C;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+ 
+  
+}
+.titulo-ver-otras-pets h2{
+color: #fff;
+ font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+}
+/*-----fin requisitos*/
+/*----- un---- */
+.mascota{
+  width: 30%;
+  margin-left: 2.5%;
+  height:280px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  }
+.img-fondo{
+  width: 95%;
+  margin-left: 2.5%;
+  height: 255px;
+  margin-top: 10px;
+}
+.datos-mascota{
+   width: 50%;
+  height: 200px;
+  padding-top: 60px;
+  
+}
+.datos-mascota h2{
+  font-size: 25px;
+   margin-left: 3%;
+   width: 90%;
+
+}
+.datos-mascota h3{
+  font-size: 18px;
+ margin-left: 7%;
+}
+
+.btn-conoceme{
+  width: 90%;  
+  margin-left: 7%;
+  margin-top: 5px;
+
+}
+
+.btn-conoceme h2{
+  font-size: 15px;
+  
+}
+.btn-buscarmas-mascotas{
+  width: 40%;  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30%;
+  padding-top: 7px;
+  height: 50px;
+  float: left;
+    
+}
+.btn-buscarmas-mascotas h2{
+  text-align: center;
+  font-size: 17px;
+}
+.btn-enviarsolicitud{
+  width: 40%;  
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30%;
+  
+}
+/*footer*/
+.footer{
+  height: 80px;
+  
+}
+.social-media{
+  width: 15%;
+  margin-left: 42.5%;
+  height: 40px;
+}
+.social-media img{
+  width: 20%;
+  margin-top: 10px;
+}
+
+
+}
