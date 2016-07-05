@@ -5,9 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mascotas</title>
 	<link rel="stylesheet" type="text/css" href="css/miPerfil.css">
-	
-
-
+	<script src="js/jquery.min.js"></script>
 </head>
 <body>
 
@@ -66,9 +64,11 @@
 					<div class="dato-perfil">
 						<h2>CAMBIANDO VIDAS</h2>
 					</div>
-
 					<div class="boton-perfil">
-						<h2>ENCONTRE UNA MASCOTA PERDIDA</h2>
+						<a href="#darAdopcion">DAR MASCOTA EN ADOPCION</a>
+					</div>
+					<div class="boton-perfil">
+						<a>ENCONTRE UNA MASCOTA PERDIDA</a>
 					</div>
 					<div class="boton-perfil">
 						<h2>MI MASCOTA SE PERDIDÒ</h2>
@@ -127,11 +127,87 @@
 	
 	</div>
 
+<!-- ventana modal para  registrarme en ayudar -->
+	<div id="darAdopcion" class="modalmask">
+		<div class="modalbox">
+			<div class="logoSesion">
+             <!--   <img src="img/store.svg">-->
+            </div>
+            <div class="tituloSesion">
+              
+              <h2>DATOS MASCOTA</h2>
+            </div>
+            <div class="salirSesion">
+               <a href="#close" title="Close" class=""><img src="img/window-close.png"></a>
+            </div>
 
-
-
+            <div class="contenedorFromulario">
+            	<div class="dato">
+            		<input type="text" placeholder="NOMBRE MASCOTA" />
+            	</div>
+            	<div class="dato">
+            		<select>
+            			<option>TIPO MASCOTA</option>
+            			<option>GATURROS</option>
+            			<option>PERRUNO</option>
+            			<option>AVES</option>
+            		</select>
+            	</div>           	
+            	<div class="dato">
+            		<select>
+            			<option>TAMAÑO</option>
+            			<option>GRANDE</option>
+            			<option>MEDIANO</option>
+            			<option>PEQUEÑO</option>
+            		</select>
+            	</div>
+            	<div class="dato">
+            		<select>
+            			<option>EDAD APROXIMADA</option>
+            			<option>1 AÑO</option>
+            			<option>2 AÑO</option>
+            			<option>3 AÑO</option>
+            			<option>4 AÑO</option>
+            			<option>5 AÑO</option>
+            			<option>6 AÑO</option>
+            			<option>7 AÑO</option>
+            			<option>8 AÑO</option>
+            			
+            		</select>
+            	</div>
+            	<div class="dato">
+            		<select>
+            			<option>ESTERILIZADO</option>
+            			<option>SI</option>
+            			<option>NO</option>
+            		</select>
+            	</div>
+            	<div class="dato">
+            		<select>
+            			<option>CIUDAD</option>
+            			<option>PASTO</option>
+            			<option>CALI</option>
+            		</select>
+            	</div>
+            	<div class="dato">
+            		<form onsubmit="return false" method="post" enctype="multipart/form-data" id="formUpload">
+					<input type="file" name="image" onchange="upload_img();">
+					<input type="file" name="image" onchange="upload_img();">
+					<input type="file" name="image" onchange="upload_img();">
+					</form>
+            		
+            	</div>
+               	<div class="dato-btn">
+	            <input   type="submit" value="REGISTRAR MASCOTA" />
+	            </div>
+            </div>
+			
+		</div>
+		
+	</div>
 	
-	<!--fin ventana modal iniciar sesion -->
+
+	<!--fin ventana modal para registrarme -->
 	<footer class="footer">
 
 		<div class="social-media">
